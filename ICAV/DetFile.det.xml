@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<additional>
+
+  <laneAreaDetector id="left_1" lane="Road1_0" pos="370" length="137" freq="10" file="bw.out" friendlyPos="false"/>
+  <!--<laneAreaDetector id="left_2" lane="Road1_1" pos="370" length="140" freq="10" file="butwhy.out" friendlyPos="false"/> -->
+
+  <laneAreaDetector id="right_1" lane="Road2_0" pos="370" length="137" freq="10"  file="bw.out" friendlyPos="false"/>
+  <!--<laneAreaDetector id="right_2" lane="Road2_1" pos="370" length="140" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="up_1" lane="Road3_0" pos="370" length="137" freq="10"  file="bw.out" friendlyPos="false"/>
+ <!--<laneAreaDetector id="up_2" lane="Road3_1" pos="370" length="140" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="down_1" lane="Road4_0" pos="370" length="137" freq="10" file="bw.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="down_2" lane="Road4_1" pos="370" length="140" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <!-- Incoming detectors below -->
+
+  <laneAreaDetector id="incoming_left_1" lane="Road1_0" pos="319" length="50" freq="10" file="bw.out" friendlyPos="false"/>
+<!--  <laneAreaDetector id="incoming_left_2" lane="Road1_1" pos="319" length="50" freq="10" file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="incoming_right_1" lane="Road2_0" pos="319" length="50" freq="10"  file="bw.out" friendlyPos="false"/>
+<!--  <laneAreaDetector id="incoming_right_2" lane="Road2_1" pos="319" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="incoming_up_1" lane="Road3_0" pos="319" length="50" freq="10"  file="bw.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="incoming_up_2" lane="Road3_1" pos="319" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="incoming_down_1" lane="Road4_0" pos="319" length="50" freq="10" file="bw.out" friendlyPos="false"/>
+<!--  <laneAreaDetector id="incoming_down_2" lane="Road4_1" pos="319" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <!--  Out Detectors below -->
+
+  <laneAreaDetector id="out_left_1" lane="Road1_out_0" pos="0" length="120" freq="10"  file="bw.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="out_left_2" lane="Road1_out_1" pos="0" length="120" freq="10" file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="out_right_1" lane="Road2_out_0" pos="0" length="120" freq="10"  file="bw.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="out_right_2" lane="Road2_out_1" pos="0" length="120" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="out_up_1" lane="Road3_out_0" pos="0" length="120" freq="10" file="bw.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="out_up_2" lane="Road3_out_1" pos="0" length="120" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="out_down_1" lane="Road4_out_0" pos="0" length="120" freq="10" file="bw.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="out_down_2" lane="Road4_out_1" pos="0" length="120" freq="10" file="butwhy.out" friendlyPos="false"/>-->
+  
+<!--  Outgoing Detectors below - used to change the vehicles back to normal vehicles again -->
+
+  <laneAreaDetector id="outgoing_out_left_1" lane="Road1_out_0" pos="123" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="outgoing_out_left_2" lane="Road1_out_1" pos="123" length="50" freq="10" file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="outgoing_out_right_1" lane="Road2_out_0" pos="123" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="outgoing_out_right_2" lane="Road2_out_1" pos="123" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="outgoing_out_up_1" lane="Road3_out_0" pos="123" length="50" freq="10" file="butwhy.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="outgoing_out_up_2" lane="Road3_out_1" pos="123" length="50" freq="10"  file="butwhy.out" friendlyPos="false"/>-->
+
+  <laneAreaDetector id="outgoing_out_down_1" lane="Road4_out_0" pos="123" length="50" freq="10" file="butwhy.out" friendlyPos="false"/>
+ <!-- <laneAreaDetector id="outgoing_out_down_2" lane="Road4_out_1" pos="123" length="50" freq="10" file="butwhy.out" friendlyPos="false"/>-->
+
+</additional> 
+
+<!-- <e1Detector id="0" lane="4i_0" pos="450" freq="30" file="cross1.out" friendlyPos="x"/> -->
+<!-- <e2Detector id="1" lane="5i_0" pos="450" freq="30" file="cross2.out" friendlyPos="x"/> -->
+

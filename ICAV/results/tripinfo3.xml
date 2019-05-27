@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 05/09/19 10:27:20 by Eclipse SUMO GUI Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="RoundAbout.net.xml"/>
+        <route-files value="TempLoad.rou.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="results/emission3.xml"/>
+        <tripinfo-output value="results/tripinfo3.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="8873"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="nylandsvejPlainTest.set.xml"/>
+    </gui_only>
+
+</configuration>

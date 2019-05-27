@@ -1,0 +1,25 @@
+<routes>
+    <vType accel="1.0" decel="5.0" id="Car" jmIgnoreKeepClearTime="100.0" maxSpeed="16" minGap="4" length="3" vClass="passenger"/>
+
+        
+    <!--emergencyDecel="0.0"-->
+    <route id="route12" edges="Road1 Road2_out"/> <!-- Geradeaus-->
+    <route id="route13" edges="Road1 Road3_out"/>
+    <route id="route14" edges="Road1 Road4_out"/>
+
+    <route id="route21" edges="Road2 Road1_out"/> <!-- Geradeaus-->
+    <route id="route23" edges="Road2 Road3_out"/>
+    <route id="route24" edges="Road2 Road4_out"/> 
+
+    <route id="route31" edges="Road3 Road1_out"/> 
+    <route id="route32" edges="Road3 Road2_out"/> 
+    <route id="route34" edges="Road3 Road4_out"/> <!-- Geradeaus-->
+
+    <route id="route41" edges="Road4 Road1_out"/>
+    <route id="route42" edges="Road4 Road2_out"/>
+    <route id="route43" edges="Road4 Road3_out"/> <!-- Geradeaus-->
+
+
+
+    <!--VEHICLE_HOLDER-->
+</routes>
