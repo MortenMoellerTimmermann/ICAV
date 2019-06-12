@@ -4,6 +4,8 @@ In order to run a demo of ICAV you need the following installed:
  - UPPAAL (4.1.19 or newer) URL: http://uppaal.org/
  - Python 2 or 3 URL: https://www.python.org/downloads/
 
+Lastly, you need to change the path in the ignored file: VerifierPath.py. This need to be set to your path for verifyta in the UPPAAL folder.
+
 From a path of the /ICAV/ICAV folder run the following command:
 	py RunnerScript.py --sumocfg ConfigFile.sumocfg --expid 1 --port 8873 --controller icav
 
