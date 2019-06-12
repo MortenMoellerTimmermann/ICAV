@@ -2,7 +2,7 @@
 <!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
 <nta>
 	<declaration>// Place global declarations here.
-const int N = 16;
+const int N = 25;
 
 const int C = 4;
 typedef int[0, N-1] carID;
@@ -49,30 +49,30 @@ int newSpeed = 0;
 
 
 </declaration>
-		<location id="id1" x="-2393" y="-1816">
-			<name x="-2369" y="-1808">SetNewSpeed</name>
+		<location id="id1" x="-2729" y="-1819">
+			<name x="-2737" y="-1861">SetNewSpeed</name>
 			<urgent/>
 		</location>
-		<location id="id2" x="-2953" y="-1816">
-			<name x="-3025" y="-1864">Updating</name>
+		<location id="id2" x="-3366" y="-1819">
+			<name x="-3425" y="-1870">Updating</name>
 			<urgent/>
 		</location>
-		<location id="id3" x="-3300" y="-1819">
-			<name x="-3323" y="-1870">InitState</name>
+		<location id="id3" x="-3646" y="-1819">
+			<name x="-3669" y="-1870">InitState</name>
 		</location>
-		<location id="id4" x="-3122" y="-1819">
-			<name x="-3162" y="-1870">ChoosingPath</name>
+		<location id="id4" x="-3570" y="-1819">
+			<name x="-3610" y="-1870">ChoosingPath</name>
 			<urgent/>
 		</location>
-		<location id="id5" x="-2013" y="-1819">
-			<name x="-2048" y="-1861">DoneSetting</name>
+		<location id="id5" x="-2516" y="-1819">
+			<name x="-2551" y="-1861">DoneSetting</name>
 		</location>
 		<init ref="id3"/>
 		<transition>
 			<source ref="id1"/>
 			<target ref="id5"/>
-			<label kind="synchronisation" x="-2193" y="-1793">SpeedSet!</label>
-			<label kind="assignment" x="-2193" y="-1768">global_newSpeed = newSpeed,
+			<label kind="synchronisation" x="-2618" y="-1810">SpeedSet!</label>
+			<label kind="assignment" x="-2618" y="-1793">global_newSpeed = newSpeed,
 global_currentSpeed = speed,
 global_uid = uid,
 currentCar = currentCar + 1</label>
@@ -80,155 +80,156 @@ currentCar = currentCar + 1</label>
 		<transition>
 			<source ref="id4"/>
 			<target ref="id1"/>
-			<label kind="guard" x="-2907" y="-1445">setSpeed == 0 &amp;&amp;
+			<label kind="guard" x="-3247" y="-1589">setSpeed == 0 &amp;&amp;
 cur == uid</label>
-			<label kind="assignment" x="-2703" y="-1445">newSpeed = desiredSpeed,
+			<label kind="assignment" x="-3102" y="-1589">newSpeed = desiredSpeed,
 cur = cur + 1</label>
-			<nail x="-3128" y="-1402"/>
-			<nail x="-2397" y="-1402"/>
+			<nail x="-3323" y="-1547"/>
+			<nail x="-2847" y="-1547"/>
 		</transition>
 		<transition>
 			<source ref="id4"/>
 			<target ref="id2"/>
-			<label kind="guard" x="-3077" y="-1793">setSpeed == 1 &amp;&amp;
+			<label kind="guard" x="-3510" y="-1819">setSpeed == 1 &amp;&amp;
 cur == uid</label>
-			<label kind="assignment" x="-3077" y="-1751">cur = cur + 1</label>
+			<label kind="assignment" x="-3510" y="-1785">cur = cur + 1</label>
 		</transition>
 		<transition>
 			<source ref="id3"/>
 			<target ref="id4"/>
-			<label kind="synchronisation" x="-3281" y="-1802">ChooseSpeed[uid]?</label>
+			<label kind="synchronisation" x="-3510" y="-1844">ChooseSpeed[uid]?</label>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1496">newSpeed = 1</label>
-			<nail x="-2958" y="-1470"/>
-			<nail x="-2397" y="-1470"/>
+			<label kind="assignment" x="-3068" y="-1640">newSpeed = 1</label>
+			<nail x="-3136" y="-1615"/>
+			<nail x="-2907" y="-1615"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1547">newSpeed = 2</label>
-			<nail x="-2958" y="-1521"/>
-			<nail x="-2397" y="-1521"/>
+			<label kind="assignment" x="-3068" y="-1674">newSpeed = 2</label>
+			<nail x="-3136" y="-1649"/>
+			<nail x="-2907" y="-1649"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1597">newSpeed = 3</label>
-			<nail x="-2958" y="-1572"/>
-			<nail x="-2397" y="-1572"/>
+			<label kind="assignment" x="-3068" y="-1708">newSpeed = 3</label>
+			<nail x="-3136" y="-1683"/>
+			<nail x="-2907" y="-1683"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1649">newSpeed = 4</label>
-			<nail x="-2958" y="-1623"/>
-			<nail x="-2397" y="-1623"/>
+			<label kind="assignment" x="-3068" y="-1742">newSpeed = 4</label>
+			<nail x="-3136" y="-1717"/>
+			<nail x="-2907" y="-1717"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1700">newSpeed = 5</label>
-			<nail x="-2958" y="-1674"/>
-			<nail x="-2397" y="-1674"/>
+			<label kind="assignment" x="-3068" y="-1776">newSpeed = 5</label>
+			<nail x="-3136" y="-1751"/>
+			<nail x="-2907" y="-1751"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1768">newSpeed = 6</label>
-			<nail x="-2958" y="-1734"/>
-			<nail x="-2397" y="-1734"/>
+			<label kind="assignment" x="-3068" y="-1810">newSpeed = 6</label>
+			<nail x="-3136" y="-1785"/>
+			<nail x="-2907" y="-1785"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1844">newSpeed = 7</label>
+			<label kind="assignment" x="-3068" y="-1844">newSpeed = 7</label>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1912">newSpeed = 8</label>
-			<nail x="-2949" y="-1887"/>
-			<nail x="-2388" y="-1887"/>
+			<label kind="assignment" x="-3068" y="-1878">newSpeed = 8</label>
+			<nail x="-3136" y="-1853"/>
+			<nail x="-2907" y="-1853"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-1963">newSpeed = 9</label>
-			<nail x="-2949" y="-1938"/>
-			<nail x="-2388" y="-1938"/>
+			<label kind="assignment" x="-3068" y="-1912">newSpeed = 9</label>
+			<nail x="-3136" y="-1887"/>
+			<nail x="-2907" y="-1887"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2014">newSpeed = 10</label>
-			<nail x="-2949" y="-1989"/>
-			<nail x="-2388" y="-1989"/>
+			<label kind="assignment" x="-3068" y="-1946">newSpeed = 10</label>
+			<nail x="-3145" y="-1921"/>
+			<nail x="-2907" y="-1921"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2065">newSpeed = 11</label>
-			<nail x="-2949" y="-2040"/>
-			<nail x="-2388" y="-2040"/>
+			<label kind="assignment" x="-3068" y="-1980">newSpeed = 11</label>
+			<nail x="-3145" y="-1955"/>
+			<nail x="-2907" y="-1955"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2125">newSpeed = 12</label>
-			<nail x="-2949" y="-2099"/>
-			<nail x="-2388" y="-2099"/>
+			<label kind="assignment" x="-3068" y="-2014">newSpeed = 12</label>
+			<nail x="-3145" y="-1989"/>
+			<nail x="-2907" y="-1989"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2184">newSpeed = 13</label>
-			<nail x="-2949" y="-2159"/>
-			<nail x="-2388" y="-2159"/>
+			<label kind="assignment" x="-3068" y="-2048">newSpeed = 13</label>
+			<nail x="-3153" y="-2023"/>
+			<nail x="-2907" y="-2023"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2235">newSpeed = 14</label>
-			<nail x="-2949" y="-2210"/>
-			<nail x="-2388" y="-2210"/>
+			<label kind="assignment" x="-3068" y="-2082">newSpeed = 14</label>
+			<nail x="-3145" y="-2057"/>
+			<nail x="-2915" y="-2057"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2286">newSpeed = 15</label>
-			<nail x="-2949" y="-2261"/>
-			<nail x="-2388" y="-2261"/>
+			<label kind="assignment" x="-3068" y="-2116">newSpeed = 15</label>
+			<nail x="-3145" y="-2091"/>
+			<nail x="-2915" y="-2091"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-2720" y="-2346">newSpeed = 16</label>
-			<nail x="-2949" y="-2312"/>
-			<nail x="-2388" y="-2312"/>
+			<label kind="assignment" x="-3068" y="-2150">newSpeed = 16</label>
+			<nail x="-3145" y="-2125"/>
+			<nail x="-2915" y="-2125"/>
 		</transition>
 	</template>
 	<template>
 		<name>Updater</name>
 		<declaration>//Indexes in the three arrays represents a car. So posx[0], posy[0] and route[0] is car 0. 
 
-int length[N] = {3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3};
-int width[N] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
-int posx[N] = {502,376,502,494,502,517,502,402,571,598,498,498,517,498,498,396};
-int posy[N] = {376,498,441,498,400,498,573,502,502,502,469,503,502,593,386,498};
+int length[N] = {3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3};
+int width[N] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
+int posx[N] = {508,362,361,504,424,504,508,492,492,492,508,498,508,492,509,504,492,430,482,392,608,495,495,462,495};
+int posy[N] = {355,492,495,360,508,484,516,356,492,579,600,626,440,516,492,432,416,492,508,492,492,592,511,492,544};
 int distance[N] ;
-int route[N] = {21,43,21,43,21,43,21,34,34,34,12,12,34,12,12,43};
-int decel[N] = {5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5};
-int accel[N] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+int route[N] = {21,43,43,21,34,21,21,12,12,12,21,12,21,12,43,21,12,43,34,43,43,12,12,43,12};
+int decel[N] = {5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5};
+int accel[N] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
 int stopDistance[N];
 int newSpeed[N];
 int currentSpeed[N];
 int done[N];
 int index = 0;
 int AllDone = 0;
-int gapDistance = 2;
+int gapDistance = 3;
+int minorGap = 0;
 int CarOneCrash = 0;
 int CarTwoCrash = 0;
 
@@ -294,7 +295,7 @@ void UpdatePos(){
             else if(route[i] == 43){
                 posx[i] = posx[i] + currentSpeed[i];
             }
-            if(distance[i] &lt; -130){
+            if(distance[i] &lt; -140){
                 done[i] = 1;
             }
         }
@@ -364,7 +365,7 @@ void CheckForCrashes(){
 
                         i_bottom_right_caronly_y = posy[i] - gapDistance - delta - (k * i_speedDif);
                         i_bottom_right_caronly_x =  posx[i] + delta + (width[i] / 2); 
-                        i_top_left_caronly_y = posy[i] + length[i] + delta - (k * i_speedDif);
+                        i_top_left_caronly_y = posy[i] + length[i] + delta + minorGap - (k * i_speedDif);
                         i_top_left_caronly_x =  posx[i] - delta - (width[i] / 2); 
                     }
                     else if(route[i] == 21){
@@ -373,9 +374,9 @@ void CheckForCrashes(){
                          i_top_left_y = posy[i] + stopDistance[i] + (k * i_speedDif);
                          i_top_left_x =  posx[i] - (width[i] / 2); 
 
-                        i_bottom_right_caronly_y = posy[i] - length[i] - delta + (k * i_speedDif);
+                        i_bottom_right_caronly_y = posy[i] - length[i] - delta - gapDistance + (k * i_speedDif);
                         i_bottom_right_caronly_x =  posx[i] + (width[i] / 2) + delta; 
-                        i_top_left_caronly_y = posy[i] + gapDistance + delta + (k * i_speedDif);
+                        i_top_left_caronly_y = posy[i] + minorGap + delta + (k * i_speedDif);
                         i_top_left_caronly_x =  posx[i] - (width[i] / 2) - delta; 
                     }
                     else if(route[i] == 34){
@@ -385,9 +386,9 @@ void CheckForCrashes(){
                          i_top_left_x = posx[i] - stopDistance[i] - (k * i_speedDif);
 
                         i_bottom_right_caronly_y =  posy[i] - (width[i] / 2) - delta; 
-                        i_bottom_right_caronly_x = posx[i] + length[i] + delta - (k * i_speedDif);
+                        i_bottom_right_caronly_x = posx[i] + length[i] + delta + gapDistance - (k * i_speedDif);
                         i_top_left_caronly_y =  posy[i] + (width[i] / 2) + delta; 
-                        i_top_left_caronly_x = posx[i] - gapDistance - delta - (k * i_speedDif);
+                        i_top_left_caronly_x = posx[i] - minorGap - delta - (k * i_speedDif);
                     }
                     else if(route[i] == 43){
                          i_bottom_right_y =  posy[i] - (width[i] / 2); 
@@ -398,7 +399,7 @@ void CheckForCrashes(){
                         i_bottom_right_caronly_y =  posy[i] - (width[i] / 2) - delta; 
                         i_bottom_right_caronly_x = posx[i] + gapDistance + delta + (k * i_speedDif);
                         i_top_left_caronly_y =  posy[i] + (width[i] / 2) + delta; 
-                        i_top_left_caronly_x = posx[i] - length[i] - delta + (k * i_speedDif);
+                        i_top_left_caronly_x = posx[i] - length[i] - delta - minorGap + (k * i_speedDif);
                     }
 
                     if(route[j] == 12){
@@ -409,7 +410,7 @@ void CheckForCrashes(){
 
                         j_bottom_right_caronly_y = posy[j] - gapDistance - delta - (k * j_speedDif);
                         j_bottom_right_caronly_x =  posx[j] + delta + (width[j] / 2); 
-                        j_top_left_caronly_y = posy[j] + length[j] + delta - (k * j_speedDif);
+                        j_top_left_caronly_y = posy[j] + length[j] + delta + minorGap - (k * j_speedDif);
                         j_top_left_caronly_x =  posx[j] - (width[j] / 2) - delta; 
                     }
                     else if(route[j] == 21){
@@ -418,9 +419,9 @@ void CheckForCrashes(){
                          j_top_left_y = posy[j] + stopDistance[i] + (k * j_speedDif);
                          j_top_left_x =  posx[j] - (width[j] / 2); 
 
-                        j_bottom_right_caronly_y = posy[j] - length[i] - delta + (k * j_speedDif);
+                        j_bottom_right_caronly_y = posy[j] - length[i] - delta - gapDistance + (k * j_speedDif);
                         j_bottom_right_caronly_x =  posx[j] + (width[j] / 2) + delta; 
-                        j_top_left_caronly_y = posy[j] + gapDistance + delta + (k * j_speedDif);
+                        j_top_left_caronly_y = posy[j] + minorGap + delta + (k * j_speedDif);
                         j_top_left_caronly_x =  posx[j] - (width[j] / 2) - delta; 
                     }
                     else if(route[j] == 34){
@@ -430,9 +431,9 @@ void CheckForCrashes(){
                          j_top_left_x = posx[j] - stopDistance[j] - (k * j_speedDif);
 
                         j_bottom_right_caronly_y =  posy[j] - (width[j] / 2) - delta; 
-                        j_bottom_right_caronly_x = posx[j] + length[j] + delta - (k * j_speedDif);
+                        j_bottom_right_caronly_x = posx[j] + length[j] + delta + gapDistance - (k * j_speedDif);
                         j_top_left_caronly_y =  posy[j] + (width[j] / 2) + delta; 
-                        j_top_left_caronly_x = posx[j] - gapDistance - delta - (k * j_speedDif);
+                        j_top_left_caronly_x = posx[j] - minorGap - delta - (k * j_speedDif);
                     }  
                     else if(route[j] == 43){
                          j_bottom_right_y =  posy[j] - (width[j] / 2); 
@@ -443,7 +444,7 @@ void CheckForCrashes(){
                         j_bottom_right_caronly_y =  posy[j] - (width[j] / 2) - delta; 
                         j_bottom_right_caronly_x = posx[j] + gapDistance + delta + (k * j_speedDif);
                         j_top_left_caronly_y =  posy[j] + (width[j] / 2) + delta; 
-                        j_top_left_caronly_x = posx[j] - length[j] - delta + (k * j_speedDif);
+                        j_top_left_caronly_x = posx[j] - length[j] - delta - minorGap + (k * j_speedDif);
                     }
                     //L er back og R er front
                     if((i_top_left_x &gt; j_bottom_right_x) || (j_top_left_x &gt; i_bottom_right_x)){
@@ -570,11 +571,11 @@ void SyncCarSpeed(){
 	</template>
 	<system>// Place template instantiations here.
 
-const int pid[N] = {5,8,0,9,2,5,6,0,9,1,3,4,3,3,1,7}; 
-const int speed[N] = {16,15,16,14,15,14,16,15,16,16,16,16,16,16,16,14};
-const int desiredSpeed[N] = {0,0,16,14,15,14,16,15,16,16,16,16,16,16,16,14};
-const int maxSpeed[N] = {30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30};
-const int setSpeed[N] = {1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+const int pid[N] = {6,8,0,1,3,4,9,0,5,2,2,2,6,1,7,0,4,9,6,3,1,5,0,8,8}; 
+const int speed[N] = {14,16,16,16,15,15,16,16,16,16,16,16,15,16,16,15,16,15,16,15,15,16,15,15,15};
+const int desiredSpeed[N] = {0,0,0,0,15,15,16,16,16,16,16,16,15,16,16,15,16,15,16,15,15,16,15,15,15};
+const int maxSpeed[N] = {16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16};
+const int setSpeed[N] = {1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 
 
