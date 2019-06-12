@@ -1,0 +1,34 @@
+<routes>
+    <vType accel="1.0" decel="5.0" id="Car" jmIgnoreKeepClearTime="100.0" maxSpeed="30" minGap="6" length="3" vClass="passenger"/>
+
+        
+    <!--emergencyDecel="0.0"-->
+    <route id="route12" edges="Road1 Road2_out"/> <!-- Geradeaus-->
+    <route id="route13" edges="Road1 Road3_out"/>
+    <route id="route14" edges="Road1 Road4_out"/>
+
+    <route id="route21" edges="Road2 Road1_out"/> <!-- Geradeaus-->
+    <route id="route23" edges="Road2 Road3_out"/>
+    <route id="route24" edges="Road2 Road4_out"/> 
+
+    <route id="route31" edges="Road3 Road1_out"/> 
+    <route id="route32" edges="Road3 Road2_out"/> 
+    <route id="route34" edges="Road3 Road4_out"/> <!-- Geradeaus-->
+
+    <route id="route41" edges="Road4 Road1_out"/>
+    <route id="route42" edges="Road4 Road2_out"/>
+    <route id="route43" edges="Road4 Road3_out"/> <!-- Geradeaus-->
+
+
+
+    <vehicle depart ="0" departLane ="0" id="car0" route="route34" type="Car"/>
+<vehicle depart ="0" departLane ="0" id="car1" route="route43" type="Car"/>
+<vehicle depart ="1" departLane ="0" id="car2" route="route34" type="Car"/>
+<vehicle depart ="2" departLane ="1" id="car3" route="route43" type="Car"/>
+<vehicle depart ="2" departLane ="1" id="car4" route="route12" type="Car"/>
+<vehicle depart ="3" departLane ="1" id="car5" route="route21" type="Car"/>
+<vehicle depart ="3" departLane ="1" id="car6" route="route34" type="Car"/>
+<vehicle depart ="3" departLane ="2" id="car7" route="route34" type="Car"/>
+
+
+</routes>

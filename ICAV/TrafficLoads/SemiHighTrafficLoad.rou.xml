@@ -1,0 +1,225 @@
+<routes>
+    <vType accel="1.0" decel="5.0" id="Car" jmIgnoreKeepClearTime="100.0" maxSpeed="30" length="3" />
+
+        
+    <!--emergencyDecel="0.0"-->
+    <route id="route12" edges="Road1 Road2_out"/> <!-- Geradeaus-->
+    <route id="route13" edges="Road1 Road3_out"/>
+    <route id="route14" edges="Road1 Road4_out"/>
+
+    <route id="route21" edges="Road2 Road1_out"/> <!-- Geradeaus-->
+    <route id="route23" edges="Road2 Road3_out"/>
+    <route id="route24" edges="Road2 Road4_out"/> 
+
+    <route id="route31" edges="Road3 Road1_out"/> 
+    <route id="route32" edges="Road3 Road2_out"/> 
+    <route id="route34" edges="Road3 Road4_out"/> <!-- Geradeaus-->
+
+    <route id="route41" edges="Road4 Road1_out"/>
+    <route id="route42" edges="Road4 Road2_out"/>
+    <route id="route43" edges="Road4 Road3_out"/> <!-- Geradeaus-->
+
+
+
+    <vehicle depart ="7" id="car0" route="route43" type="Car"/>
+<vehicle depart ="7" id="car1" route="route21" type="Car"/>
+<vehicle depart ="9" id="car2" route="route21" type="Car"/>
+<vehicle depart ="12" id="car3" route="route43" type="Car"/>
+<vehicle depart ="14" id="car4" route="route43" type="Car"/>
+<vehicle depart ="15" id="car5" route="route34" type="Car"/>
+<vehicle depart ="15" id="car6" route="route34" type="Car"/>
+<vehicle depart ="15" id="car7" route="route21" type="Car"/>
+<vehicle depart ="21" id="car8" route="route21" type="Car"/>
+<vehicle depart ="24" id="car9" route="route34" type="Car"/>
+<vehicle depart ="24" id="car10" route="route43" type="Car"/>
+<vehicle depart ="25" id="car11" route="route34" type="Car"/>
+<vehicle depart ="33" id="car12" route="route34" type="Car"/>
+<vehicle depart ="35" id="car13" route="route21" type="Car"/>
+<vehicle depart ="36" id="car14" route="route34" type="Car"/>
+<vehicle depart ="37" id="car15" route="route12" type="Car"/>
+<vehicle depart ="37" id="car16" route="route43" type="Car"/>
+<vehicle depart ="39" id="car17" route="route34" type="Car"/>
+<vehicle depart ="40" id="car18" route="route12" type="Car"/>
+<vehicle depart ="43" id="car19" route="route21" type="Car"/>
+<vehicle depart ="46" id="car20" route="route43" type="Car"/>
+<vehicle depart ="47" id="car21" route="route43" type="Car"/>
+<vehicle depart ="47" id="car22" route="route12" type="Car"/>
+<vehicle depart ="47" id="car23" route="route43" type="Car"/>
+<vehicle depart ="50" id="car24" route="route21" type="Car"/>
+<vehicle depart ="51" id="car25" route="route21" type="Car"/>
+<vehicle depart ="52" id="car26" route="route12" type="Car"/>
+<vehicle depart ="57" id="car27" route="route43" type="Car"/>
+<vehicle depart ="59" id="car28" route="route12" type="Car"/>
+<vehicle depart ="59" id="car29" route="route34" type="Car"/>
+<vehicle depart ="60" id="car30" route="route21" type="Car"/>
+<vehicle depart ="62" id="car31" route="route43" type="Car"/>
+<vehicle depart ="63" id="car32" route="route21" type="Car"/>
+<vehicle depart ="64" id="car33" route="route43" type="Car"/>
+<vehicle depart ="69" id="car34" route="route43" type="Car"/>
+<vehicle depart ="71" id="car35" route="route21" type="Car"/>
+<vehicle depart ="72" id="car36" route="route34" type="Car"/>
+<vehicle depart ="74" id="car37" route="route21" type="Car"/>
+<vehicle depart ="78" id="car38" route="route34" type="Car"/>
+<vehicle depart ="78" id="car39" route="route12" type="Car"/>
+<vehicle depart ="79" id="car40" route="route21" type="Car"/>
+<vehicle depart ="79" id="car41" route="route34" type="Car"/>
+<vehicle depart ="84" id="car42" route="route34" type="Car"/>
+<vehicle depart ="84" id="car43" route="route43" type="Car"/>
+<vehicle depart ="86" id="car44" route="route21" type="Car"/>
+<vehicle depart ="87" id="car45" route="route21" type="Car"/>
+<vehicle depart ="95" id="car46" route="route21" type="Car"/>
+<vehicle depart ="95" id="car47" route="route21" type="Car"/>
+<vehicle depart ="96" id="car48" route="route34" type="Car"/>
+<vehicle depart ="97" id="car49" route="route43" type="Car"/>
+<vehicle depart ="98" id="car50" route="route34" type="Car"/>
+<vehicle depart ="101" id="car51" route="route21" type="Car"/>
+<vehicle depart ="101" id="car52" route="route43" type="Car"/>
+<vehicle depart ="107" id="car53" route="route21" type="Car"/>
+<vehicle depart ="109" id="car54" route="route12" type="Car"/>
+<vehicle depart ="112" id="car55" route="route43" type="Car"/>
+<vehicle depart ="115" id="car56" route="route34" type="Car"/>
+<vehicle depart ="116" id="car57" route="route21" type="Car"/>
+<vehicle depart ="117" id="car58" route="route12" type="Car"/>
+<vehicle depart ="119" id="car59" route="route43" type="Car"/>
+<vehicle depart ="123" id="car60" route="route21" type="Car"/>
+<vehicle depart ="124" id="car61" route="route12" type="Car"/>
+<vehicle depart ="126" id="car62" route="route43" type="Car"/>
+<vehicle depart ="128" id="car63" route="route43" type="Car"/>
+<vehicle depart ="130" id="car64" route="route12" type="Car"/>
+<vehicle depart ="133" id="car65" route="route43" type="Car"/>
+<vehicle depart ="134" id="car66" route="route34" type="Car"/>
+<vehicle depart ="134" id="car67" route="route34" type="Car"/>
+<vehicle depart ="136" id="car68" route="route43" type="Car"/>
+<vehicle depart ="136" id="car69" route="route43" type="Car"/>
+<vehicle depart ="138" id="car70" route="route34" type="Car"/>
+<vehicle depart ="141" id="car71" route="route34" type="Car"/>
+<vehicle depart ="144" id="car72" route="route43" type="Car"/>
+<vehicle depart ="145" id="car73" route="route34" type="Car"/>
+<vehicle depart ="145" id="car74" route="route12" type="Car"/>
+<vehicle depart ="146" id="car75" route="route43" type="Car"/>
+<vehicle depart ="148" id="car76" route="route34" type="Car"/>
+<vehicle depart ="149" id="car77" route="route34" type="Car"/>
+<vehicle depart ="151" id="car78" route="route34" type="Car"/>
+<vehicle depart ="157" id="car79" route="route43" type="Car"/>
+<vehicle depart ="158" id="car80" route="route21" type="Car"/>
+<vehicle depart ="158" id="car81" route="route21" type="Car"/>
+<vehicle depart ="159" id="car82" route="route21" type="Car"/>
+<vehicle depart ="160" id="car83" route="route34" type="Car"/>
+<vehicle depart ="161" id="car84" route="route12" type="Car"/>
+<vehicle depart ="162" id="car85" route="route21" type="Car"/>
+<vehicle depart ="163" id="car86" route="route12" type="Car"/>
+<vehicle depart ="165" id="car87" route="route34" type="Car"/>
+<vehicle depart ="167" id="car88" route="route21" type="Car"/>
+<vehicle depart ="169" id="car89" route="route34" type="Car"/>
+<vehicle depart ="169" id="car90" route="route12" type="Car"/>
+<vehicle depart ="173" id="car91" route="route34" type="Car"/>
+<vehicle depart ="177" id="car92" route="route43" type="Car"/>
+<vehicle depart ="178" id="car93" route="route43" type="Car"/>
+<vehicle depart ="178" id="car94" route="route43" type="Car"/>
+<vehicle depart ="179" id="car95" route="route21" type="Car"/>
+<vehicle depart ="188" id="car96" route="route21" type="Car"/>
+<vehicle depart ="189" id="car97" route="route43" type="Car"/>
+<vehicle depart ="190" id="car98" route="route21" type="Car"/>
+<vehicle depart ="191" id="car99" route="route43" type="Car"/>
+<vehicle depart ="192" id="car100" route="route12" type="Car"/>
+<vehicle depart ="195" id="car101" route="route21" type="Car"/>
+<vehicle depart ="196" id="car102" route="route34" type="Car"/>
+<vehicle depart ="197" id="car103" route="route43" type="Car"/>
+<vehicle depart ="200" id="car104" route="route21" type="Car"/>
+<vehicle depart ="201" id="car105" route="route12" type="Car"/>
+<vehicle depart ="207" id="car106" route="route12" type="Car"/>
+<vehicle depart ="211" id="car107" route="route34" type="Car"/>
+<vehicle depart ="211" id="car108" route="route43" type="Car"/>
+<vehicle depart ="212" id="car109" route="route12" type="Car"/>
+<vehicle depart ="213" id="car110" route="route21" type="Car"/>
+<vehicle depart ="214" id="car111" route="route21" type="Car"/>
+<vehicle depart ="222" id="car112" route="route43" type="Car"/>
+<vehicle depart ="224" id="car113" route="route21" type="Car"/>
+<vehicle depart ="224" id="car114" route="route43" type="Car"/>
+<vehicle depart ="230" id="car115" route="route21" type="Car"/>
+<vehicle depart ="233" id="car116" route="route43" type="Car"/>
+<vehicle depart ="234" id="car117" route="route12" type="Car"/>
+<vehicle depart ="235" id="car118" route="route34" type="Car"/>
+<vehicle depart ="240" id="car119" route="route34" type="Car"/>
+<vehicle depart ="243" id="car120" route="route21" type="Car"/>
+<vehicle depart ="244" id="car121" route="route43" type="Car"/>
+<vehicle depart ="245" id="car122" route="route34" type="Car"/>
+<vehicle depart ="245" id="car123" route="route21" type="Car"/>
+<vehicle depart ="245" id="car124" route="route43" type="Car"/>
+<vehicle depart ="247" id="car125" route="route43" type="Car"/>
+<vehicle depart ="247" id="car126" route="route34" type="Car"/>
+<vehicle depart ="248" id="car127" route="route21" type="Car"/>
+<vehicle depart ="249" id="car128" route="route34" type="Car"/>
+<vehicle depart ="251" id="car129" route="route12" type="Car"/>
+<vehicle depart ="252" id="car130" route="route43" type="Car"/>
+<vehicle depart ="254" id="car131" route="route21" type="Car"/>
+<vehicle depart ="255" id="car132" route="route34" type="Car"/>
+<vehicle depart ="259" id="car133" route="route43" type="Car"/>
+<vehicle depart ="259" id="car134" route="route43" type="Car"/>
+<vehicle depart ="262" id="car135" route="route12" type="Car"/>
+<vehicle depart ="266" id="car136" route="route43" type="Car"/>
+<vehicle depart ="266" id="car137" route="route12" type="Car"/>
+<vehicle depart ="273" id="car138" route="route12" type="Car"/>
+<vehicle depart ="275" id="car139" route="route21" type="Car"/>
+<vehicle depart ="277" id="car140" route="route43" type="Car"/>
+<vehicle depart ="278" id="car141" route="route43" type="Car"/>
+<vehicle depart ="279" id="car142" route="route34" type="Car"/>
+<vehicle depart ="282" id="car143" route="route21" type="Car"/>
+<vehicle depart ="286" id="car144" route="route43" type="Car"/>
+<vehicle depart ="288" id="car145" route="route34" type="Car"/>
+<vehicle depart ="290" id="car146" route="route34" type="Car"/>
+<vehicle depart ="292" id="car147" route="route34" type="Car"/>
+<vehicle depart ="296" id="car148" route="route21" type="Car"/>
+<vehicle depart ="298" id="car149" route="route21" type="Car"/>
+<vehicle depart ="302" id="car150" route="route43" type="Car"/>
+<vehicle depart ="305" id="car151" route="route43" type="Car"/>
+<vehicle depart ="307" id="car152" route="route21" type="Car"/>
+<vehicle depart ="307" id="car153" route="route34" type="Car"/>
+<vehicle depart ="308" id="car154" route="route12" type="Car"/>
+<vehicle depart ="313" id="car155" route="route43" type="Car"/>
+<vehicle depart ="316" id="car156" route="route12" type="Car"/>
+<vehicle depart ="320" id="car157" route="route34" type="Car"/>
+<vehicle depart ="324" id="car158" route="route12" type="Car"/>
+<vehicle depart ="324" id="car159" route="route12" type="Car"/>
+<vehicle depart ="325" id="car160" route="route34" type="Car"/>
+<vehicle depart ="327" id="car161" route="route43" type="Car"/>
+<vehicle depart ="328" id="car162" route="route21" type="Car"/>
+<vehicle depart ="330" id="car163" route="route43" type="Car"/>
+<vehicle depart ="330" id="car164" route="route43" type="Car"/>
+<vehicle depart ="330" id="car165" route="route12" type="Car"/>
+<vehicle depart ="331" id="car166" route="route21" type="Car"/>
+<vehicle depart ="336" id="car167" route="route43" type="Car"/>
+<vehicle depart ="338" id="car168" route="route21" type="Car"/>
+<vehicle depart ="340" id="car169" route="route34" type="Car"/>
+<vehicle depart ="342" id="car170" route="route12" type="Car"/>
+<vehicle depart ="345" id="car171" route="route43" type="Car"/>
+<vehicle depart ="346" id="car172" route="route21" type="Car"/>
+<vehicle depart ="347" id="car173" route="route43" type="Car"/>
+<vehicle depart ="348" id="car174" route="route43" type="Car"/>
+<vehicle depart ="350" id="car175" route="route34" type="Car"/>
+<vehicle depart ="350" id="car176" route="route34" type="Car"/>
+<vehicle depart ="351" id="car177" route="route34" type="Car"/>
+<vehicle depart ="353" id="car178" route="route21" type="Car"/>
+<vehicle depart ="355" id="car179" route="route12" type="Car"/>
+<vehicle depart ="357" id="car180" route="route43" type="Car"/>
+<vehicle depart ="360" id="car181" route="route12" type="Car"/>
+<vehicle depart ="361" id="car182" route="route12" type="Car"/>
+<vehicle depart ="362" id="car183" route="route21" type="Car"/>
+<vehicle depart ="363" id="car184" route="route34" type="Car"/>
+<vehicle depart ="365" id="car185" route="route12" type="Car"/>
+<vehicle depart ="366" id="car186" route="route21" type="Car"/>
+<vehicle depart ="368" id="car187" route="route43" type="Car"/>
+<vehicle depart ="370" id="car188" route="route34" type="Car"/>
+<vehicle depart ="371" id="car189" route="route12" type="Car"/>
+<vehicle depart ="371" id="car190" route="route43" type="Car"/>
+<vehicle depart ="381" id="car191" route="route34" type="Car"/>
+<vehicle depart ="384" id="car192" route="route34" type="Car"/>
+<vehicle depart ="385" id="car193" route="route43" type="Car"/>
+<vehicle depart ="389" id="car194" route="route12" type="Car"/>
+<vehicle depart ="390" id="car195" route="route12" type="Car"/>
+<vehicle depart ="397" id="car196" route="route34" type="Car"/>
+<vehicle depart ="397" id="car197" route="route43" type="Car"/>
+<vehicle depart ="399" id="car198" route="route12" type="Car"/>
+<vehicle depart ="399" id="car199" route="route12" type="Car"/>
+
+</routes>

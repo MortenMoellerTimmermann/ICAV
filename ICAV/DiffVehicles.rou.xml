@@ -1,0 +1,63 @@
+<routes>
+    <vType accel="1.0" decel="5.0" id="Car1" jmIgnoreKeepClearTime="100.0" maxSpeed="30" length="3" />
+    <vType accel="2.0" decel="4.0" id="Car2" jmIgnoreKeepClearTime="100.0" maxSpeed="30" length="3" />
+    <vType accel="3.0" decel="7.0" id="Car3" jmIgnoreKeepClearTime="100.0" maxSpeed="30" length="4" />
+    <vType accel="1.0" decel="5.0" id="Car4" jmIgnoreKeepClearTime="100.0" maxSpeed="30" length="3" />
+    <vType accel="1.0" decel="4.0" id="Bus" jmIgnoreKeepClearTime="100.0" maxSpeed="30" length="10" width="3" />
+
+
+        
+    <!--emergencyDecel="0.0"-->
+    <route id="route12" edges="Road1 Road2_out"/> <!-- Geradeaus-->
+    <route id="route13" edges="Road1 Road3_out"/>
+    <route id="route14" edges="Road1 Road4_out"/>
+
+    <route id="route21" edges="Road2 Road1_out"/> <!-- Geradeaus-->
+    <route id="route23" edges="Road2 Road3_out"/>
+    <route id="route24" edges="Road2 Road4_out"/> 
+
+    <route id="route31" edges="Road3 Road1_out"/> 
+    <route id="route32" edges="Road3 Road2_out"/> 
+    <route id="route34" edges="Road3 Road4_out"/> <!-- Geradeaus-->
+
+    <route id="route41" edges="Road4 Road1_out"/>
+    <route id="route42" edges="Road4 Road2_out"/>
+    <route id="route43" edges="Road4 Road3_out"/> <!-- Geradeaus-->
+
+
+
+    <vehicle depart ="4" id="car0" route="route43" type="Car3"/>
+<vehicle depart ="6" id="car1" route="route34" type="Car3"/>
+<vehicle depart ="24" id="car2" route="route12" type="Car3"/>
+<vehicle depart ="29" id="car3" route="route43" type="Car3"/>
+<vehicle depart ="33" id="car4" route="route43" type="Car3"/>
+<vehicle depart ="33" id="car5" route="route21" type="Car4"/>
+<vehicle depart ="39" id="car6" route="route21" type="Car2"/>
+<vehicle depart ="40" id="car7" route="route43" type="Car4"/>
+<vehicle depart ="40" id="car8" route="route12" type="Car1"/>
+<vehicle depart ="42" id="car9" route="route34" type="Car4"/>
+<vehicle depart ="45" id="car10" route="route12" type="Car4"/>
+<vehicle depart ="52" id="car11" route="route34" type="Car3"/>
+<vehicle depart ="57" id="car12" route="route43" type="Car2"/>
+<vehicle depart ="62" id="car13" route="route34" type="Car3"/>
+<vehicle depart ="64" id="car14" route="route34" type="Car1"/>
+<vehicle depart ="69" id="car15" route="route43" type="Bus"/>
+<vehicle depart ="71" id="car16" route="route21" type="Car2"/>
+<vehicle depart ="71" id="car17" route="route34" type="Car4"/>
+<vehicle depart ="72" id="car18" route="route21" type="Car2"/>
+<vehicle depart ="73" id="car19" route="route43" type="Car4"/>
+<vehicle depart ="77" id="car20" route="route12" type="Car4"/>
+<vehicle depart ="79" id="car21" route="route21" type="Car3"/>
+<vehicle depart ="81" id="car22" route="route34" type="Car4"/>
+<vehicle depart ="82" id="car23" route="route12" type="Bus"/>
+<vehicle depart ="86" id="car24" route="route43" type="Car1"/>
+<vehicle depart ="86" id="car25" route="route43" type="Car2"/>
+<vehicle depart ="87" id="car26" route="route43" type="Car1"/>
+<vehicle depart ="89" id="car27" route="route21" type="Bus"/>
+<vehicle depart ="91" id="car28" route="route34" type="Car2"/>
+<vehicle depart ="91" id="car29" route="route34" type="Car3"/>
+<vehicle depart ="92" id="car30" route="route34" type="Car4"/>
+<vehicle depart ="100" id="car31" route="route34" type="Car4"/>
+<vehicle depart ="100" id="car32" route="route43" type="Car1"/>
+
+</routes>
