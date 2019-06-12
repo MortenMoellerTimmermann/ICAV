@@ -12,7 +12,7 @@ simStep: 37
 
 
 simStep: 38
- CPU user time used : 0 ms\r\n 
+ CPU user time used : 16 ms\r\n 
 
 
 simStep: 39
@@ -20,66 +20,34 @@ simStep: 39
 
 
 simStep: 42
- CPU user time used : 3047 ms\r\n 
-
-
-simStep: 43
- CPU user time used : 344 ms\r\n 
-
-
-simStep: 45
- CPU user time used : 62 ms\r\n 
-
-
-simStep: 46
  CPU user time used : 141 ms\r\n 
 
 
+simStep: 43
+ CPU user time used : 62 ms\r\n 
+
+
+simStep: 45
+ CPU user time used : 63 ms\r\n 
+
+
+simStep: 46
+ CPU user time used : 1703 ms\r\n 
+
+
 simStep: 47
- CPU user time used : 78 ms\r\n 
+ CPU user time used : 46 ms\r\n 
 
 
 simStep: 48
- CPU user time used : 31 ms\r\n 
+ CPU user time used : 47 ms\r\n 
 
 
 simStep: 49
- CPU user time used : 14094 ms\r\n 
+ CPU user time used : 1704 ms\r\n 
 
 
 simStep: 50
- CPU user time used : 110 ms\r\n 
-
-
-simStep: 51
- CPU user time used : 1187 ms\r\n 
-
-
-simStep: 52
- CPU user time used : 140 ms\r\n 
-
-
-simStep: 53
- CPU user time used : 156 ms\r\n 
-
-
-simStep: 55
- CPU user time used : 110 ms\r\n 
-
-
-simStep: 56
- CPU user time used : 45594 ms\r\n 
-
-
-simStep: 57
- CPU user time used : 250 ms\r\n 
-
-
-simStep: 58
- CPU user time used : 234 ms\r\n 
-
-
-simStep: 59
- CPU user time used : 140 ms\r\n 
+ CPU user time used : 171 ms\r\n 
 
 
