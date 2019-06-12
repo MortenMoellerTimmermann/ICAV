@@ -16,7 +16,7 @@ The rest of the command states which SUMO config file, experiment ID, port and c
 In order to recreate the experiments run the following command:
 	py CreateResults.py 
 
-Again py may have to be Python3 or something else instead. To configure what the experiments test there are three different parameters that can be changed in the CreateResults.py file. 
+Again, py may have to be Python3 or something else instead. To configure what the experiments test there are three different parameters that can be changed in the CreateResults.py file. 
  - TimeDuration
  - CurrentLoad
  - amountOfLanes
