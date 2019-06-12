@@ -175,17 +175,19 @@ def run(options):
                         ShouldCall = 0
                     
                     ListOfCarIDs.append(Car)
+
+                    Scaler = 100
                     carTuple = (Car, 
-                                int(round(traci.vehicle.getSpeed(Car))),
-                                int(round(traci.vehicle.getLength(Car))),
-                                int(round(traci.vehicle.getWidth(Car))), 
-                                float(round((traci.vehicle.getPosition(Car)[0]),2)),
-                                float(round((traci.vehicle.getPosition(Car)[1]),2)),
+                                int(round(traci.vehicle.getSpeed(Car))*Scaler),
+                                int(round(traci.vehicle.getLength(Car))*Scaler),
+                                int(round(traci.vehicle.getWidth(Car))*Scaler), 
+                                int(round((traci.vehicle.getPosition(Car)[0]))*Scaler),
+                                int(round((traci.vehicle.getPosition(Car)[1]))*Scaler),
                                 int(route_dictionary[traci.vehicle.getRoute(Car)]),
-                                int(round(traci.vehicle.getDecel(Car))),
-                                int(round(traci.vehicle.getAccel(Car))),
-                                int(round(traci.vehicle.getMaxSpeed(Car))),
-                                int(round(DictOfDesiredSpeeds[Car] if Car in DictOfDesiredSpeeds.keys() else 0)),
+                                int(round(traci.vehicle.getDecel(Car))*Scaler),
+                                int(round(traci.vehicle.getAccel(Car))*Scaler),
+                                int(round(traci.vehicle.getMaxSpeed(Car))*Scaler),
+                                int(round((DictOfDesiredSpeeds[Car] if Car in DictOfDesiredSpeeds.keys() else 0),2)*Scaler),
                                 ShouldCall)
                     ListOfCars.append(carTuple)
                     #print("x: " + str(traci.vehicle.getPosition(det[i])[0]) + " y: " + str(traci.vehicle.getPosition(det[i])[1]))
@@ -248,6 +250,7 @@ def run(options):
 
 def changeCarSpeeds(cars, speeds):
     for i in range(0,len(cars)):
+        speeds[i] / 100
         traci.vehicle.setSpeed(cars[i][0],speeds[i])
         
 

@@ -164,7 +164,7 @@ cur == uid</label>
 		<declaration>//Indexes in the three arrays represents a car. So posx[0], posy[0] and route[0] is car 0. 
 
 double length[N] = {3.0};
-double width[N] = {2.0};
+double width[N] = {1.8};
 double posx[N] = {492.0};
 double posy[N] = {636.25};
 double prevPosX[N];
@@ -300,26 +300,26 @@ void CheckForCrashes(){
 		if(route[i] == 12){
 			i_bottom_right_caronly_y = posy[i] - gapDistance - delta;
 			i_bottom_right_caronly_x =  posx[i] + delta + (width[i] / 2); 
-			i_top_left_caronly_y = prevPosY[i] + length[i] + delta;
+			i_top_left_caronly_y = prevPosY[i] + length[i] + delta + minorGap;
 			i_top_left_caronly_x =  prevPosX[i] - delta - (width[i] / 2); 
 		}
 		else if(route[i] == 21){
 			i_bottom_right_caronly_y = prevPosY[i] - length[i] - delta - gapDistance;
 			i_bottom_right_caronly_x =  prevPosX[i] + (width[i] / 2) + delta; 
-			i_top_left_caronly_y = posy[i] + delta;
+			i_top_left_caronly_y = posy[i] + minorGap + delta;
 			i_top_left_caronly_x =  posx[i] - (width[i] / 2) - delta; 
 		}
 		else if(route[i] == 34){
 			i_bottom_right_caronly_y =  prevPosY[i] - (width[i] / 2) - delta; 
 			i_bottom_right_caronly_x = prevPosX[i] + length[i] + delta + gapDistance;
 			i_top_left_caronly_y =  posy[i] + (width[i] / 2) + delta; 
-			i_top_left_caronly_x = posx[i] - delta;
+			i_top_left_caronly_x = posx[i] - minorGap - delta;
 		}
 		else if(route[i] == 43){
 			i_bottom_right_caronly_y =  posy[i] - (width[i] / 2) - delta; 
 			i_bottom_right_caronly_x = posx[i] + gapDistance + delta;
 			i_top_left_caronly_y =  prevPosY[i] + (width[i] / 2) + delta; 
-			i_top_left_caronly_x = prevPosX[i] - length[i] - delta;
+			i_top_left_caronly_x = prevPosX[i] - length[i] - delta - minorGap;
 		}
 
         for(j = 0; j &lt; N; j++){
@@ -330,26 +330,26 @@ void CheckForCrashes(){
 				if(route[j] == 12){
 					j_bottom_right_caronly_y = posy[j] - gapDistance - delta;
 					j_bottom_right_caronly_x =  posx[j] + delta + (width[j] / 2); 
-					j_top_left_caronly_y = prevPosY[j] + length[j] + delta;
+					j_top_left_caronly_y = prevPosY[j] + length[j] + delta + minorGap;
 					j_top_left_caronly_x =  prevPosX[j] - (width[j] / 2) - delta; 
 				}
 				else if(route[j] == 21){
 					j_bottom_right_caronly_y = prevPosY[j] - length[i] - delta - gapDistance;
 					j_bottom_right_caronly_x =  prevPosX[j] + (width[j] / 2) + delta; 
-					j_top_left_caronly_y = posy[j] + delta;
+					j_top_left_caronly_y = posy[j] + minorGap + delta;
 					j_top_left_caronly_x =  posx[j] - (width[j] / 2) - delta; 
 				}
 				else if(route[j] == 34){
 					j_bottom_right_caronly_y =  prevPosY[j] - (width[j] / 2) - delta; 
 					j_bottom_right_caronly_x = prevPosX[j] + length[j] + delta + gapDistance;
 					j_top_left_caronly_y =  posy[j] + (width[j] / 2) + delta; 
-					j_top_left_caronly_x = posx[j] - delta;
+					j_top_left_caronly_x = posx[j] - minorGap - delta;
 				}  
 				else if(route[j] == 43){
 					j_bottom_right_caronly_y =  posy[j] - (width[j] / 2) - delta; 
 					j_bottom_right_caronly_x = posx[j] + gapDistance + delta;
 					j_top_left_caronly_y =  prevPosY[j] + (width[j] / 2) + delta; 
-					j_top_left_caronly_x = prevPosX[j] - length[j] - delta;
+					j_top_left_caronly_x = prevPosX[j] - length[j] - delta - minorGap;
 				}
 
 				if((i_top_left_caronly_x &gt; j_bottom_right_caronly_x) || (j_top_left_caronly_x &gt; i_bottom_right_caronly_x)){
