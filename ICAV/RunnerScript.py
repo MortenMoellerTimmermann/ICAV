@@ -30,7 +30,7 @@ rootDir = os.path.abspath(os.getcwd())
 pathToResults = os.path.join(rootDir,'results')
 pathToModels = os.path.join(rootDir,'Uppaal')
 icavQuery = os.path.join(pathToModels, 'ICAV.q')
-icavModel = os.path.join(pathToModels, 'IcavSpeed2.xml')
+icavModel = os.path.join(pathToModels, 'IcavSpeedNewClock.xml')
 ListOfReservations = []
 xData = []
 yData = []
@@ -179,8 +179,8 @@ def run(options):
                                 int(round(traci.vehicle.getSpeed(Car))),
                                 int(round(traci.vehicle.getLength(Car))),
                                 int(round(traci.vehicle.getWidth(Car))), 
-                                int((traci.vehicle.getPosition(Car)[0])),
-                                int((traci.vehicle.getPosition(Car)[1])),
+                                float(round((traci.vehicle.getPosition(Car)[0]),2)),
+                                float(round((traci.vehicle.getPosition(Car)[1]),2)),
                                 int(route_dictionary[traci.vehicle.getRoute(Car)]),
                                 int(round(traci.vehicle.getDecel(Car))),
                                 int(round(traci.vehicle.getAccel(Car))),

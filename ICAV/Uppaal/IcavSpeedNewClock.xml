@@ -11,7 +11,8 @@ chan SyncWithCrashDetector;
 chan ChooseSpeed[N], SpeedSet;
 chan go;
 
-int global_newSpeed = 0, global_currentSpeed = 0, global_uid = 0;
+double global_newSpeed = 0.0, global_currentSpeed = 0.0;
+int global_uid = 0;
 
 int currentCar = 0;
 int cur = 0;
@@ -29,13 +30,13 @@ clock y;
 </declaration>
 		<location id="id0" x="-216" y="16">
 			<name x="-192" y="8">Timer</name>
-			<label kind="invariant" x="-229" y="42">x &lt;= ClockTimer</label>
+			<label kind="invariant" x="-229" y="42">x &lt;= 1</label>
 		</location>
 		<init ref="id0"/>
 		<transition>
 			<source ref="id0"/>
 			<target ref="id0"/>
-			<label kind="guard" x="-224" y="-112">x == ClockTimer</label>
+			<label kind="guard" x="-224" y="-112">x == 1</label>
 			<label kind="synchronisation" x="-224" y="-97">go!</label>
 			<label kind="assignment" x="-224" y="-128">x = 0</label>
 			<nail x="-128" y="-64"/>
@@ -46,7 +47,7 @@ clock y;
 		<name>Car</name>
 		<parameter>const carID uid, int id, int speed, int desiredSpeed, int maxSpeed, int setSpeed</parameter>
 		<declaration>// Place local declarations here.
-int newSpeed = 0;
+double newSpeed = 0.0;
 
 
 </declaration>
@@ -103,56 +104,56 @@ cur == uid</label>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1674">newSpeed = 2</label>
+			<label kind="assignment" x="-3068" y="-1674">newSpeed = 2.0</label>
 			<nail x="-3136" y="-1649"/>
 			<nail x="-2907" y="-1649"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1742">newSpeed = 4</label>
+			<label kind="assignment" x="-3068" y="-1742">newSpeed = 4.0</label>
 			<nail x="-3136" y="-1717"/>
 			<nail x="-2907" y="-1717"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1810">newSpeed = 6</label>
+			<label kind="assignment" x="-3068" y="-1810">newSpeed = 6.0</label>
 			<nail x="-3136" y="-1785"/>
 			<nail x="-2907" y="-1785"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1878">newSpeed = 8</label>
+			<label kind="assignment" x="-3068" y="-1878">newSpeed = 8.0</label>
 			<nail x="-3136" y="-1853"/>
 			<nail x="-2907" y="-1853"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1946">newSpeed = 10</label>
+			<label kind="assignment" x="-3068" y="-1946">newSpeed = 10.0</label>
 			<nail x="-3145" y="-1921"/>
 			<nail x="-2907" y="-1921"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-2014">newSpeed = 12</label>
+			<label kind="assignment" x="-3068" y="-2014">newSpeed = 12.0</label>
 			<nail x="-3145" y="-1989"/>
 			<nail x="-2907" y="-1989"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-2082">newSpeed = 14</label>
+			<label kind="assignment" x="-3068" y="-2082">newSpeed = 14.0</label>
 			<nail x="-3145" y="-2057"/>
 			<nail x="-2915" y="-2057"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-2150">newSpeed = 16</label>
+			<label kind="assignment" x="-3068" y="-2150">newSpeed = 16.0</label>
 			<nail x="-3145" y="-2125"/>
 			<nail x="-2915" y="-2125"/>
 		</transition>
@@ -167,13 +168,13 @@ double posx[N] = //HOLDER_CAR_POSX
 double posy[N] = //HOLDER_CAR_POSY
 double prevPosX[N];
 double prevPosY[N];
-int distance[N] ;
+double distance[N] ;
 int route[N] = //HOLDER_CAR_ROUTE
 int decel[N] = //HOLDER_CAR_DECEL
 int accel[N] = //HOLDER_CAR_ACCEL
-int stopDistance[N];
-int newSpeed[N];
-int currentSpeed[N];
+double stopDistance[N];
+double newSpeed[N];
+double currentSpeed[N];
 int done[N];
 int index = 0;
 int AllDone = 0;
@@ -206,9 +207,10 @@ void Constructor(){
         p.y = CPCoodinates[index++];
         CPs[i] = p;
     }
-    prevPosX[i] = posx[i];
-    prevPosY[i] = posY[i];
+
     for(i = 0; i &lt; N; i++){
+        prevPosX[i] = posx[i];
+        prevPosY[i] = posy[i];
         if(route[i] == 12){
             distance[i] = posy[i] - 500;
         }
