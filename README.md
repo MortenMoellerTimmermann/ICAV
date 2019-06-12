@@ -1,2 +1,0 @@
-# ICAV
-ICAV implementation
