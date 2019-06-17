@@ -12,6 +12,8 @@ rootDir = os.path.abspath(os.getcwd())
 pathToResults = os.path.join(rootDir,'results')
 pathToModels = os.path.join(rootDir,'Uppaal')
 
+Scaler = 10
+
 def runModel(com, args, query, simStep):
     query = "\"" + query + "\""
     f = Popen(com+args+query, stdout = PIPE, stderr = PIPE, shell=True)
@@ -72,7 +74,7 @@ def getStrategy(outStr, cars):
     for i in range (0,len(cars)):
         strStart = "Cars(" + str(i) + ").newSpeed"
         #carSpeeds.append(float(strategoGetSubString(outStr,strStart)))
-        carSpeeds.append(float(standardGetSubString(outStr,strStart)))
+        carSpeeds.append(float(standardGetSubString(outStr,strStart)) / Scaler)
 
     print("new speeds:" + str(carSpeeds))
  
@@ -93,7 +95,7 @@ def standardGetSubString(outStr, key):
     outStr = str(outStr)
     found = outStr.rfind(key)
     start = found + key_len
-    end = outStr.find(delim, start) + len(delim) + 2
+    end = outStr.find(delim, start) + len(delim) + 3
     value = (outStr[start:end]).strip()
     return value[1:]
 
