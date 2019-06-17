@@ -2,7 +2,7 @@
 <!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
 <nta>
 	<declaration>// Place global declarations here.
-const int N = 1;
+const int N = 2;
 
 const int C = 4;
 typedef int[0, N-1] carID;
@@ -20,7 +20,7 @@ int cur = 0;
 
 int SoftCrashDetected = 0;
 
-int ClockScaler = 100;
+int ClockScaler = 10;
 </declaration>
 	<template>
 		<name>Timer</name>
@@ -105,74 +105,62 @@ cur == uid</label>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1674">newSpeed = 200</label>
+			<label kind="assignment" x="-3119" y="-1674">newSpeed = (2 * ClockScaler)</label>
 			<nail x="-3136" y="-1649"/>
 			<nail x="-2907" y="-1649"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1742">newSpeed = 400</label>
+			<label kind="assignment" x="-3119" y="-1742">newSpeed = (4 * ClockScaler)</label>
 			<nail x="-3136" y="-1717"/>
 			<nail x="-2907" y="-1717"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1810">newSpeed = 600</label>
+			<label kind="assignment" x="-3119" y="-1810">newSpeed = (6 * ClockScaler)</label>
 			<nail x="-3136" y="-1785"/>
 			<nail x="-2907" y="-1785"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1878">newSpeed = 800</label>
+			<label kind="assignment" x="-3119" y="-1878">newSpeed = (8 * ClockScaler)</label>
 			<nail x="-3136" y="-1853"/>
 			<nail x="-2907" y="-1853"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-1946">newSpeed = 1000</label>
-			<nail x="-3145" y="-1921"/>
-			<nail x="-2907" y="-1921"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-2014">newSpeed = 1200</label>
-			<nail x="-3145" y="-1989"/>
-			<nail x="-2907" y="-1989"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-2082">newSpeed = 1400</label>
-			<nail x="-3145" y="-2057"/>
-			<nail x="-2915" y="-2057"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="assignment" x="-3068" y="-2150">newSpeed = 1600</label>
-			<nail x="-3145" y="-2125"/>
-			<nail x="-2915" y="-2125"/>
 		</transition>
 	</template>
 	<template>
 		<name>Updater</name>
 		<declaration>//Indexes in the three arrays represents a car. So posx[0], posy[0] and route[0] is car 0. 
 
-int length[N] = {300};
-int width[N] = {200};
-int posx[N] = {49200};
-int posy[N] = {63600};
+int length[N] = {30,30};
+int width[N] = {20,20};
+int posx[N] = {4920,6100};
+int posy[N] = {6410,5080};
 int prevPosX[N];
 int prevPosY[N];
 int distance[N] ;
-int route[N] = {12};
-int decel[N] = {500};
-int accel[N] = {100};
+int route[N] = {12,34};
+int decel[N] = {50,50};
+int accel[N] = {10,10};
 int stopDistance[N];
 int newSpeed[N];
 int currentSpeed[N];
@@ -213,16 +201,16 @@ void Constructor(){
         prevPosX[i] = posx[i];
         prevPosY[i] = posy[i];
         if(route[i] == 12){
-            distance[i] = posy[i] - 500;
+            distance[i] = posy[i] - (500 * ClockScaler);
         }
         else if(route[i]  == 21){
-            distance[i] = 500 - posy[i];
+            distance[i] = (500 * ClockScaler) - posy[i];
         }
         else if(route[i]  == 34){
-            distance[i]  = posx[i] - 500;
+            distance[i]  = posx[i] - (500 * ClockScaler);
         }
         else if(route[i]  == 43){
-            distance[i]  = 500 - posx[i];
+            distance[i]  = (500 * ClockScaler) - posx[i];
         }
 
     }
@@ -461,11 +449,11 @@ void SyncCarSpeed(){
 	</template>
 	<system>// Place template instantiations here.
 
-const int pid[N] = {0}; 
-const int speed[N] = {1600};
-const int desiredSpeed[N] = {0};
-const int maxSpeed[N] = {1600};
-const int setSpeed[N] = {1};
+const int pid[N] = {1,0}; 
+const int speed[N] = {150,160};
+const int desiredSpeed[N] = {0,800};
+const int maxSpeed[N] = {160,160};
+const int setSpeed[N] = {1,0};
 
 
 

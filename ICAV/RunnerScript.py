@@ -30,10 +30,11 @@ rootDir = os.path.abspath(os.getcwd())
 pathToResults = os.path.join(rootDir,'results')
 pathToModels = os.path.join(rootDir,'Uppaal')
 icavQuery = os.path.join(pathToModels, 'ICAV.q')
-icavModel = os.path.join(pathToModels, 'IcavSpeedNewClock.xml')
+icavModel = os.path.join(pathToModels, 'LowSpeeds.xml')
 ListOfReservations = []
 xData = []
 yData = []
+Scaler = 10
 
 
 def run(options):
@@ -176,7 +177,6 @@ def run(options):
                     
                     ListOfCarIDs.append(Car)
 
-                    Scaler = 100
                     carTuple = (Car, 
                                 int(round(traci.vehicle.getSpeed(Car))*Scaler),
                                 int(round(traci.vehicle.getLength(Car))*Scaler),
@@ -250,7 +250,7 @@ def run(options):
 
 def changeCarSpeeds(cars, speeds):
     for i in range(0,len(cars)):
-        speeds[i] / 100
+        speeds[i] / Scaler
         traci.vehicle.setSpeed(cars[i][0],speeds[i])
         
 

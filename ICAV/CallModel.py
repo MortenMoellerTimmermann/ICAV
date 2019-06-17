@@ -16,7 +16,7 @@ def runModel(com, args, query, simStep):
     query = "\"" + query + "\""
     f = Popen(com+args+query, stdout = PIPE, stderr = PIPE, shell=True)
     out, outerror = f.communicate()
-    print(out)
+    print(outerror)
 
     out_string = str(out)
     log_text = out_string.split('--')
