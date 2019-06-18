@@ -50,15 +50,24 @@ fo = open(routeFile, "r+")
 str_model = fo.read()
 fo.close()
 
-for i in range(numberOfCars):
-    vehicleString += "<vehicle depart =\""
-    vehicleString += str(CarList[i][0])
-    vehicleString += "\" departLane =\""
-    vehicleString += str(CarList[i][1])
-    vehicleString += "\" id=\"car" + str(i) + "\""
-    vehicleString += " route=\"" + random.choice(routeList) + "\""
-    vehicleString += " type=\"" + random.choice(vehicleTypeList) + "\""
-    vehicleString += "/>\n"
+if (amountOfLanes == 1):
+    for i in range(numberOfCars):
+        vehicleString += "<vehicle depart =\""
+        vehicleString += str(CarList[i][1])
+        vehicleString += "\" id=\"car" + str(i) + "\""
+        vehicleString += " route=\"" + random.choice(routeList) + "\""
+        vehicleString += " type=\"" + random.choice(vehicleTypeList) + "\""
+        vehicleString += "/>\n"
+else:
+    for i in range(numberOfCars):
+        vehicleString += "<vehicle depart =\""
+        vehicleString += str(CarList[i][0])
+        vehicleString += "\" departLane =\""
+        vehicleString += str(CarList[i][1])
+        vehicleString += "\" id=\"car" + str(i) + "\""
+        vehicleString += " route=\"" + random.choice(routeList) + "\""
+        vehicleString += " type=\"" + random.choice(vehicleTypeList) + "\""
+        vehicleString += "/>\n"
 
 str_model = str.replace(str_model, toReplace, vehicleString, 1)
 

@@ -1,57 +1,9 @@
 -- CPU-LOGFILE --
 simStep: 35
- CPU user time used : 0 ms\n 
-
-
-simStep: 36
- CPU user time used : 0 ms\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 37
  CPU user time used : 0 ms\n 
-
-
-simStep: 38
- CPU user time used : 60 ms\n 
-
-
-simStep: 42
- CPU user time used : 10 ms\n 
-
-
-simStep: 43
- CPU user time used : 10 ms\n 
-
-
-simStep: 44
- CPU user time used : 4620 ms\n 
-
-
-simStep: 45
- CPU user time used : 50 ms\n 
-
-
-simStep: 46
- CPU user time used : 40 ms\n 
-
-
-simStep: 47
- CPU user time used : 470 ms\n 
-
-
-simStep: 48
- CPU user time used : 570 ms\n 
-
-
-simStep: 49
- CPU user time used : 40 ms\n 
-
-
-simStep: 50
- CPU user time used : 60 ms\n 
-
-
-simStep: 51
- CPU user time used : 30 ms\n 
 
 

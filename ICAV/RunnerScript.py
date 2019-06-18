@@ -30,10 +30,11 @@ rootDir = os.path.abspath(os.getcwd())
 pathToResults = os.path.join(rootDir,'results')
 pathToModels = os.path.join(rootDir,'Uppaal')
 icavQuery = os.path.join(pathToModels, 'ICAV.q')
-icavModel = os.path.join(pathToModels, 'IcavSpeed2.xml')
+icavModel = os.path.join(pathToModels, 'IcavSpeedNewClock.xml')
 ListOfReservations = []
 xData = []
 yData = []
+Scaler = 10
 
 
 def run(options):
@@ -175,17 +176,18 @@ def run(options):
                         ShouldCall = 0
                     
                     ListOfCarIDs.append(Car)
+
                     carTuple = (Car, 
-                                int(round(traci.vehicle.getSpeed(Car))),
-                                int(round(traci.vehicle.getLength(Car))),
-                                int(round(traci.vehicle.getWidth(Car))), 
-                                int((traci.vehicle.getPosition(Car)[0])),
-                                int((traci.vehicle.getPosition(Car)[1])),
+                                int(round(traci.vehicle.getSpeed(Car))*Scaler),
+                                int(round(traci.vehicle.getLength(Car))*Scaler),
+                                int(round(traci.vehicle.getWidth(Car))*Scaler), 
+                                int(round((traci.vehicle.getPosition(Car)[0]))*Scaler),
+                                int(round((traci.vehicle.getPosition(Car)[1]))*Scaler),
                                 int(route_dictionary[traci.vehicle.getRoute(Car)]),
-                                int(round(traci.vehicle.getDecel(Car))),
-                                int(round(traci.vehicle.getAccel(Car))),
-                                int(round(traci.vehicle.getMaxSpeed(Car))),
-                                int(round(DictOfDesiredSpeeds[Car] if Car in DictOfDesiredSpeeds.keys() else 0)),
+                                int(round(traci.vehicle.getDecel(Car))*Scaler),
+                                int(round(traci.vehicle.getAccel(Car))*Scaler),
+                                int(round(traci.vehicle.getMaxSpeed(Car))*Scaler),
+                                int(round((DictOfDesiredSpeeds[Car] if Car in DictOfDesiredSpeeds.keys() else 0),2)*Scaler),
                                 ShouldCall)
                     ListOfCars.append(carTuple)
                     #print("x: " + str(traci.vehicle.getPosition(det[i])[0]) + " y: " + str(traci.vehicle.getPosition(det[i])[1]))
