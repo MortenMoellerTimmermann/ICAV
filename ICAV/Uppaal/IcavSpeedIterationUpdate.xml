@@ -263,7 +263,6 @@ void UpdatePos(){
     }
     
     if(checker){
-        amountOfAlreadySet++;
         if(amountOfAlreadySet == N){
             AllBeenThrough = 1;
         }
@@ -475,13 +474,13 @@ amountOfAlreadySet++</label>
 			<source ref="id6"/>
 			<target ref="id8"/>
 			<label kind="guard" x="-450" y="34">currentCar == (amountOfAlreadySet + 1)</label>
+			<label kind="assignment" x="-450" y="51">amountOfAlreadySet++</label>
 		</transition>
 		<transition>
 			<source ref="id7"/>
 			<target ref="id6"/>
 			<label kind="synchronisation" x="-671" y="-102">SpeedSet?</label>
-			<label kind="assignment" x="-671" y="-85">SyncCarSpeed(),
-amountOfAlreadySet++</label>
+			<label kind="assignment" x="-671" y="-85">SyncCarSpeed()</label>
 			<nail x="-484" y="-59"/>
 		</transition>
 		<transition>
