@@ -195,7 +195,7 @@ def run(options):
     
             ListOfCars = list(set(ListOfCars))
             ListOfCarIDs = list(set(ListOfCarIDs))
-            ListOfCars.sort(key=lambda tup: tup[11], reverse=True)
+            ListOfCars.sort(key=lambda tup: tup[11], reverse=False)
             #print(ListOfCars)
 
 

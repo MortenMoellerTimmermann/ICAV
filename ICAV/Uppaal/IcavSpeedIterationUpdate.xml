@@ -211,6 +211,7 @@ void Constructor(){
         posy[i] = startposy[i];
         prevPosX[i] = posx[i];
         prevPosY[i] = posy[i];
+        done[i] = 0;
         if(route[i] == 12){
             distance[i] = posy[i] - (500 * ClockScaler);
         }
