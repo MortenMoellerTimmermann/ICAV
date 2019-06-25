@@ -174,7 +174,7 @@ int distance[N] ;
 int route[N] = //HOLDER_CAR_ROUTE
 int decel[N] = //HOLDER_CAR_DECEL
 int accel[N] = //HOLDER_CAR_ACCEL
-int amountOfAlreadySet = //HOLDER_CAR_ALREADYSET
+int amountOfAlreadySet = //HOLDER_CAR_ALREADYSET ;
 int stopDistance[N];
 int newSpeed[N];
 int currentSpeed[N];
@@ -208,7 +208,7 @@ void Constructor(){
 
     for(i = 0; i &lt; N; i++){
         posx[i] = startposx[i];
-        posy[i] = startposy[i]
+        posy[i] = startposy[i];
         prevPosX[i] = posx[i];
         prevPosY[i] = posy[i];
         if(route[i] == 12){
@@ -263,7 +263,7 @@ void UpdatePos(){
     }
     
     if(checker){
-        amountOfAlreadySet++
+        amountOfAlreadySet++;
         if(amountOfAlreadySet == N){
             AllBeenThrough = 1;
         }
