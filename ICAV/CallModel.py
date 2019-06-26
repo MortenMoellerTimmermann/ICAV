@@ -18,7 +18,7 @@ def runModel(com, args, query, simStep):
     query = "\"" + query + "\""
     f = Popen(com+args+query, stdout = PIPE, stderr = PIPE, shell=True)
     out, outerror = f.communicate()
-    print(outerror)
+    #print(outerror)
 
     out_string = str(out)
     log_text = out_string.split('--')
@@ -203,6 +203,14 @@ def createModel(master_model,expId,simStep,cars):
     value = value[:-1]
     value += "};"
     str_model = str.replace(str_model, toReplace, value, 1)
+
+    toReplace = "//HOLDER_CAR_ALREADYSET"
+    value = 0
+    for i in range (0,len(cars)):
+        if(cars[i][11] == 0):
+            value = value + 1
+    str_model = str.replace(str_model, toReplace, str(value), 1)
+
 
     toReplace = "//HOLDER_SIM_STEP"
     value = "int sim_step = " + str(simStep) + ";"

@@ -5,4 +5,3 @@ from os.path import expanduser
 home = expanduser("~")
 veri = home + '/Downloads/uppaal64-4.1.22/bin-Linux/verifyta'
 
-#'/Downloads/uppaal-4.1.20-stratego-5/bin-Linux/verifyta'

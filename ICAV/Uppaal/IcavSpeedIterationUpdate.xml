@@ -174,7 +174,7 @@ int distance[N] ;
 int route[N] = //HOLDER_CAR_ROUTE
 int decel[N] = //HOLDER_CAR_DECEL
 int accel[N] = //HOLDER_CAR_ACCEL
-int amountOfAlreadySet = //HOLDER_CAR_ALREADYSET
+int amountOfAlreadySet = //HOLDER_CAR_ALREADYSET ;
 int stopDistance[N];
 int newSpeed[N];
 int currentSpeed[N];
@@ -208,9 +208,10 @@ void Constructor(){
 
     for(i = 0; i &lt; N; i++){
         posx[i] = startposx[i];
-        posy[i] = startposy[i]
+        posy[i] = startposy[i];
         prevPosX[i] = posx[i];
         prevPosY[i] = posy[i];
+        done[i] = 0;
         if(route[i] == 12){
             distance[i] = posy[i] - (500 * ClockScaler);
         }
@@ -263,7 +264,6 @@ void UpdatePos(){
     }
     
     if(checker){
-        amountOfAlreadySet++
         if(amountOfAlreadySet == N){
             AllBeenThrough = 1;
         }
@@ -475,13 +475,13 @@ amountOfAlreadySet++</label>
 			<source ref="id6"/>
 			<target ref="id8"/>
 			<label kind="guard" x="-450" y="34">currentCar == (amountOfAlreadySet + 1)</label>
+			<label kind="assignment" x="-450" y="51">amountOfAlreadySet++</label>
 		</transition>
 		<transition>
 			<source ref="id7"/>
 			<target ref="id6"/>
 			<label kind="synchronisation" x="-671" y="-102">SpeedSet?</label>
-			<label kind="assignment" x="-671" y="-85">SyncCarSpeed(),
-amountOfAlreadySet++</label>
+			<label kind="assignment" x="-671" y="-85">SyncCarSpeed()</label>
 			<nail x="-484" y="-59"/>
 		</transition>
 		<transition>

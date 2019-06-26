@@ -30,7 +30,7 @@ rootDir = os.path.abspath(os.getcwd())
 pathToResults = os.path.join(rootDir,'results')
 pathToModels = os.path.join(rootDir,'Uppaal')
 icavQuery = os.path.join(pathToModels, 'ICAV.q')
-icavModel = os.path.join(pathToModels, 'IcavSpeedNewClock.xml')
+icavModel = os.path.join(pathToModels, 'IcavSpeedIterationUpdate.xml')
 ListOfReservations = []
 xData = []
 yData = []
@@ -195,7 +195,7 @@ def run(options):
     
             ListOfCars = list(set(ListOfCars))
             ListOfCarIDs = list(set(ListOfCarIDs))
-            ListOfCars.sort(key=lambda tup: tup[11], reverse=True)
+            ListOfCars.sort(key=lambda tup: tup[11], reverse=False)
             #print(ListOfCars)
 
 

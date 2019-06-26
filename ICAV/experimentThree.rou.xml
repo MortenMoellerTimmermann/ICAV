@@ -1,5 +1,5 @@
 <routes>
-    <vType accel="1.0" decel="5.0" id="Car" jmIgnoreKeepClearTime="100.0" maxSpeed="30" minGap="6" length="3" vClass="passenger"/>
+    <vType accel="1.0" decel="5.0" id="Car" jmIgnoreKeepClearTime="100.0" maxSpeed="30" minGap="4" length="3" vClass="passenger"/>
 
         
     <!--emergencyDecel="0.0"-->
