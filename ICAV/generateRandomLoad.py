@@ -55,6 +55,7 @@ if (amountOfLanes == 1):
         vehicleString += "<vehicle depart =\""
         vehicleString += str(CarList[i][1])
         vehicleString += "\" id=\"car" + str(i) + "\""
+        vehicleString += " departSpeed\"=" + str(16) + "\""
         vehicleString += " route=\"" + random.choice(routeList) + "\""
         vehicleString += " type=\"" + random.choice(vehicleTypeList) + "\""
         vehicleString += "/>\n"
@@ -64,6 +65,7 @@ else:
         vehicleString += str(CarList[i][0])
         vehicleString += "\" departLane =\""
         vehicleString += str(CarList[i][1])
+        vehicleString += "\" departSpeed=\"" + str(16)
         vehicleString += "\" id=\"car" + str(i) + "\""
         vehicleString += " route=\"" + random.choice(routeList) + "\""
         vehicleString += " type=\"" + random.choice(vehicleTypeList) + "\""
