@@ -1,29 +1,53 @@
 -- CPU-LOGFILE --
 simStep: 24
- CPU user time used : 16 ms\r\n 
+ CPU user time used : 0 ms\n 
 
 
 simStep: 26
- CPU user time used : 0 ms\r\n 
+ CPU user time used : 0 ms\n 
 
 
 simStep: 27
- CPU user time used : 219 ms\r\n 
+ CPU user time used : 10 ms\n 
 
 
 simStep: 28
- CPU user time used : 313 ms\r\n 
+ CPU user time used : 70 ms\n 
 
 
 simStep: 29
- CPU user time used : 42187 ms\r\n 
+ CPU user time used : 13350 ms\n 
 
 
 simStep: 31
- CPU user time used : 62 ms\r\n 
+ CPU user time used : 30 ms\n 
 
 
 simStep: 32
- CPU user time used : 15 ms\r\n 
+ CPU user time used : 10 ms\n 
+
+
+simStep: 33
+ CPU user time used : 21870 ms\n 
+
+
+simStep: 35
+ CPU user time used : 30 ms\n 
+
+
+simStep: 36
+ CPU user time used : 20 ms\n 
+
+
+simStep: 37
+ CPU user time used : 31680 ms\n 
+
+
+simStep: 39
+ CPU user time used : 35840 ms\n 
+
+
+simStep: 40
+ CPU user time used : 30 ms\n 
 
 
