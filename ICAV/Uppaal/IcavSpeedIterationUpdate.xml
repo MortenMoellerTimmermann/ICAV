@@ -51,30 +51,36 @@ int newSpeed = 0;
 
 
 </declaration>
-		<location id="id1" x="-2729" y="-1819">
-			<name x="-2737" y="-1861">SetNewSpeed</name>
+		<location id="id1" x="-3180" y="-3017">
+			<name x="-3188" y="-3059">SetNewSpeed</name>
 			<urgent/>
 		</location>
-		<location id="id2" x="-3366" y="-1819">
-			<name x="-3425" y="-1870">Updating</name>
+		<location id="id2" x="-3817" y="-3017">
+			<name x="-3876" y="-3068">Updating</name>
 			<urgent/>
 		</location>
-		<location id="id3" x="-3646" y="-1819">
-			<name x="-3669" y="-1870">InitState</name>
+		<location id="id3" x="-4097" y="-3017">
+			<name x="-4120" y="-3068">InitState</name>
 		</location>
-		<location id="id4" x="-3570" y="-1819">
-			<name x="-3610" y="-1870">ChoosingPath</name>
+		<location id="id4" x="-4021" y="-3017">
+			<name x="-4061" y="-3068">ChoosingPath</name>
 			<urgent/>
 		</location>
-		<location id="id5" x="-2516" y="-1819">
-			<name x="-2551" y="-1861">DoneSetting</name>
+		<location id="id5" x="-2967" y="-3017">
+			<name x="-3002" y="-3059">DoneSetting</name>
 		</location>
 		<init ref="id3"/>
 		<transition>
+			<source ref="id2"/>
+			<target ref="id1"/>
+			<label kind="select" x="-3613" y="-3068">i : int[1,16]</label>
+			<label kind="assignment" x="-3613" y="-3042">newSpeed = (i * ClockScaler)</label>
+		</transition>
+		<transition>
 			<source ref="id1"/>
 			<target ref="id5"/>
-			<label kind="synchronisation" x="-2618" y="-1810">SpeedSet!</label>
-			<label kind="assignment" x="-2618" y="-1793">global_newSpeed = newSpeed,
+			<label kind="synchronisation" x="-3069" y="-3008">SpeedSet!</label>
+			<label kind="assignment" x="-3069" y="-2991">global_newSpeed = newSpeed,
 global_currentSpeed = speed,
 global_uid = uid,
 currentCar = currentCar + 1</label>
@@ -82,80 +88,24 @@ currentCar = currentCar + 1</label>
 		<transition>
 			<source ref="id4"/>
 			<target ref="id1"/>
-			<label kind="guard" x="-3247" y="-1589">setSpeed == 0 &amp;&amp;
+			<label kind="guard" x="-3698" y="-2787">setSpeed == 0 &amp;&amp;
 cur == uid</label>
-			<label kind="assignment" x="-3102" y="-1589">newSpeed = desiredSpeed,
+			<label kind="assignment" x="-3553" y="-2787">newSpeed = desiredSpeed,
 cur = cur + 1</label>
-			<nail x="-3323" y="-1547"/>
-			<nail x="-2847" y="-1547"/>
+			<nail x="-3774" y="-2745"/>
+			<nail x="-3298" y="-2745"/>
 		</transition>
 		<transition>
 			<source ref="id4"/>
 			<target ref="id2"/>
-			<label kind="guard" x="-3510" y="-1819">setSpeed == 1 &amp;&amp;
+			<label kind="guard" x="-3961" y="-3017">setSpeed == 1 &amp;&amp;
 cur == uid</label>
-			<label kind="assignment" x="-3510" y="-1785">cur = cur + 1</label>
+			<label kind="assignment" x="-3961" y="-2983">cur = cur + 1</label>
 		</transition>
 		<transition>
 			<source ref="id3"/>
 			<target ref="id4"/>
-			<label kind="synchronisation" x="-3510" y="-1844">ChooseSpeed[uid]?</label>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-1674">newSpeed = (2 * ClockScaler)</label>
-			<nail x="-3136" y="-1649"/>
-			<nail x="-2907" y="-1649"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-1742">newSpeed = (4 * ClockScaler)</label>
-			<nail x="-3136" y="-1717"/>
-			<nail x="-2907" y="-1717"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-1810">newSpeed = (6 * ClockScaler)</label>
-			<nail x="-3136" y="-1785"/>
-			<nail x="-2907" y="-1785"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-1878">newSpeed = (8 * ClockScaler)</label>
-			<nail x="-3136" y="-1853"/>
-			<nail x="-2907" y="-1853"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-1946">newSpeed = (10 * ClockScaler)</label>
-			<nail x="-3145" y="-1921"/>
-			<nail x="-2907" y="-1921"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-2014">newSpeed = (12 * ClockScaler)</label>
-			<nail x="-3145" y="-1989"/>
-			<nail x="-2907" y="-1989"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-2082">newSpeed = (14 * ClockScaler)</label>
-			<nail x="-3145" y="-2057"/>
-			<nail x="-2915" y="-2057"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="assignment" x="-3119" y="-2150">newSpeed = (16 * ClockScaler)</label>
-			<nail x="-3145" y="-2125"/>
-			<nail x="-2915" y="-2125"/>
+			<label kind="synchronisation" x="-3961" y="-3042">ChooseSpeed[uid]?</label>
 		</transition>
 	</template>
 	<template>

@@ -1,14 +1,14 @@
 -- CPU-LOGFILE --
 simStep: 35
- CPU user time used : 15 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 38
- CPU user time used : 16 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 39
- CPU user time used : 16 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 42
@@ -24,7 +24,7 @@ simStep: 46
 
 
 simStep: 47
- CPU user time used : 16 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 48
@@ -32,7 +32,7 @@ simStep: 48
 
 
 simStep: 51
- CPU user time used : 47 ms\r\n 
+ CPU user time used : 15 ms\r\n 
 
 
 simStep: 52
@@ -40,7 +40,7 @@ simStep: 52
 
 
 simStep: 53
- CPU user time used : 32 ms\r\n 
+ CPU user time used : 15 ms\r\n 
 
 
 simStep: 54
@@ -48,7 +48,7 @@ simStep: 54
 
 
 simStep: 56
- CPU user time used : 16 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 57
@@ -64,23 +64,23 @@ simStep: 59
 
 
 simStep: 60
- CPU user time used : 47 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 61
- CPU user time used : 32 ms\r\n 
+ CPU user time used : 16 ms\r\n 
 
 
 simStep: 62
- CPU user time used : 47 ms\r\n 
+ CPU user time used : 16 ms\r\n 
 
 
 simStep: 64
- CPU user time used : 63 ms\r\n 
+ CPU user time used : 15 ms\r\n 
 
 
 simStep: 67
- CPU user time used : 15 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 68
@@ -88,342 +88,22 @@ simStep: 68
 
 
 simStep: 70
- CPU user time used : 31 ms\r\n 
+ CPU user time used : 15 ms\r\n 
 
 
 simStep: 72
- CPU user time used : 63 ms\r\n 
+ CPU user time used : 0 ms\r\n 
 
 
 simStep: 73
- CPU user time used : 110 ms\r\n 
+ CPU user time used : 63 ms\r\n 
 
 
 simStep: 74
- CPU user time used : 63 ms\r\n 
+ CPU user time used : 31 ms\r\n 
 
 
 simStep: 76
- CPU user time used : 32 ms\r\n 
-
-
-simStep: 77
- CPU user time used : 532 ms\r\n 
-
-
-simStep: 78
- CPU user time used : 6453 ms\r\n 
-
-
-simStep: 81
- CPU user time used : 156 ms\r\n 
-
-
-simStep: 83
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 84
- CPU user time used : 782 ms\r\n 
-
-
-simStep: 86
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 88
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 90
- CPU user time used : 32 ms\r\n 
-
-
-simStep: 91
  CPU user time used : 31 ms\r\n 
-
-
-simStep: 92
- CPU user time used : 141 ms\r\n 
-
-
-simStep: 95
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 96
- CPU user time used : 110 ms\r\n 
-
-
-simStep: 97
- CPU user time used : 62 ms\r\n 
-
-
-simStep: 98
- CPU user time used : 78 ms\r\n 
-
-
-simStep: 100
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 101
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 102
- CPU user time used : 109 ms\r\n 
-
-
-simStep: 106
- CPU user time used : 3032 ms\r\n 
-
-
-simStep: 107
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 110
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 111
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 112
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 115
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 117
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 119
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 120
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 121
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 124
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 126
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 127
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 128
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 129
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 132
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 133
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 134
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 135
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 136
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 138
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 140
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 141
- CPU user time used : 46 ms\r\n 
-
-
-simStep: 143
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 145
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 146
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 149
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 150
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 153
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 154
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 155
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 156
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 158
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 159
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 162
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 163
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 164
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 167
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 168
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 169
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 171
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 172
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 173
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 175
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 176
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 178
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 179
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 180
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 181
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 183
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 184
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 185
- CPU user time used : 32 ms\r\n 
-
-
-simStep: 186
- CPU user time used : 0 ms\r\n 
-
-
-simStep: 187
- CPU user time used : 16 ms\r\n 
-
-
-simStep: 191
- CPU user time used : 313 ms\r\n 
-
-
-simStep: 192
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 194
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 196
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 198
- CPU user time used : 47 ms\r\n 
-
-
-simStep: 199
- CPU user time used : 31 ms\r\n 
-
-
-simStep: 201
- CPU user time used : 63 ms\r\n 
-
-
-simStep: 202
- CPU user time used : 15 ms\r\n 
-
-
-simStep: 203
- CPU user time used : 15 ms\r\n 
 
 
