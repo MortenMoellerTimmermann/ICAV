@@ -36,7 +36,7 @@ vehicleTypeList = ["Car"]
 
 #<vehicle depart ="0" id="car1" route="route12" type="Car"/>
 vehicleString = ""
-amountOfLanes = 3
+amountOfLanes = 1
 CarList = []
 numberOfCars = int(maxDepart / averageSpawnRate)
 numberOfCars = numberOfCars * amountOfLanes

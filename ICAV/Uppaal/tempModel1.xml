@@ -2,7 +2,7 @@
 <!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
 <nta>
 	<declaration>// Place global declarations here.
-const int N = 2;
+const int N = 34;
 
 const int C = 4;
 typedef int[0, N-1] carID;
@@ -163,19 +163,19 @@ cur == uid</label>
 		<name>Updater</name>
 		<declaration>//Indexes in the three arrays represents a car. So posx[0], posy[0] and route[0] is car 0. 
 
-int length[N] = {30,30};
-int width[N] = {20,20};
-int startposx[N] = {3670,5080};
-int startposy[N] = {4920,3660};
+int length[N] = {30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30};
+int width[N] = {20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20};
+int startposx[N] = {6080,5700,4920,5050,4950,5090,5220,5330,5080,4500,5080,5080,4920,5080,5050,4920,4950,5050,6390,4920,4950,4130,4920,5080,3930,5920,3940,4410,4950,5080,6340,3660,5050,3660};
+int startposy[N] = {5080,5080,5640,5480,6050,4920,5080,4920,5480,4920,4790,3930,4370,6380,4780,4900,4900,4220,4920,6180,5210,4920,5150,4230,4950,4920,5080,5080,6340,3650,5080,4950,3650,4920};
 int posx[N];
 int posy[N];
 int prevPosX[N];
 int prevPosY[N];
 int distance[N] ;
-int route[N] = {43,21};
-int decel[N] = {50,50};
-int accel[N] = {10,10};
-int amountOfAlreadySet = 0 ;
+int route[N] = {34,34,12,21,12,43,34,43,21,43,21,21,12,21,21,12,12,21,43,12,12,43,12,21,43,43,34,34,12,21,34,43,21,43};
+int decel[N] = {50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50};
+int accel[N] = {10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10};
+int amountOfAlreadySet = 28 ;
 int stopDistance[N];
 int newSpeed[N];
 int currentSpeed[N];
@@ -495,11 +495,11 @@ amountOfAlreadySet++</label>
 	</template>
 	<system>// Place template instantiations here.
 
-const int pid[N] = {0,1}; 
-const int speed[N] = {160,160};
-const int desiredSpeed[N] = {0,0};
-const int maxSpeed[N] = {160,160};
-const int setSpeed[N] = {1,1};
+const int pid[N] = {2,0,8,7,8,2,4,5,6,7,3,4,4,1,6,8,0,3,0,9,5,9,1,1,7,3,2,9,1,6,5,0,4,2}; 
+const int speed[N] = {140,160,140,140,140,150,140,140,140,140,140,140,140,160,140,120,120,140,160,160,140,120,120,140,140,160,160,160,160,160,160,160,160,160};
+const int desiredSpeed[N] = {140,160,140,140,140,160,140,140,140,140,140,140,140,160,140,120,120,140,160,160,140,120,120,140,140,160,160,160,0,0,0,0,0,0};
+const int maxSpeed[N] = {160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160,160};
+const int setSpeed[N] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1};
 
 
 

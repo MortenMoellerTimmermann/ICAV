@@ -203,7 +203,7 @@ def run(options):
 
             #print(ListOfCars)
             print("Amount of cars: " + str(len(ListOfCars)) + " - Cars getting a speed assigned: " + str(amountGettingSpeed))
-            print("Of the format: [carID, speed, lenght, width, x-pos, y-pos, route, decel, accel, maxspeed, desiredSpeed, speedSet]")
+            print("Of the format: [carID, speed, length, width, x-pos, y-pos, route, decel, accel, maxspeed, desiredspeed, speedSet]")
             print(ListOfCars)
 
 
