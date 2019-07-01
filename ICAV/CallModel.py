@@ -76,7 +76,7 @@ def getStrategy(outStr, cars):
         #carSpeeds.append(float(strategoGetSubString(outStr,strStart)))
         carSpeeds.append(float(standardGetSubString(outStr,strStart)) / Scaler)
 
-    print("new speeds:" + str(carSpeeds))
+    print("\nNew speeds:" + str(carSpeeds) +"\n")
  
     return carSpeeds
 
