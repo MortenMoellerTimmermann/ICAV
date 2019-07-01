@@ -2,7 +2,7 @@
 <!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
 <nta>
 	<declaration>// Place global declarations here.
-const int N = 1;
+const int N = 13;
 
 const int C = 4;
 typedef int[0, N-1] carID;
@@ -163,19 +163,19 @@ cur == uid</label>
 		<name>Updater</name>
 		<declaration>//Indexes in the three arrays represents a car. So posx[0], posy[0] and route[0] is car 0. 
 
-int length[N] = {30};
-int width[N] = {20};
-int startposx[N] = {6420};
-int startposy[N] = {5080};
+int length[N] = {30,30,30,30,30,30,30,30,30,30,30,30,30};
+int width[N] = {20,20,20,20,20,20,20,20,20,20,20,20,20};
+int startposx[N] = {6430,4130,6020,5080,5160,5280,4920,5200,5080,5080,6180,4920,3690};
+int startposy[N] = {4950,4920,5080,4580,4950,4920,3810,5080,4280,5870,4920,6320,4950};
 int posx[N];
 int posy[N];
 int prevPosX[N];
 int prevPosY[N];
 int distance[N] ;
-int route[N] = {34};
-int decel[N] = {50};
-int accel[N] = {10};
-int amountOfAlreadySet = 1 ;
+int route[N] = {43,43,34,21,43,43,12,34,21,21,43,12,43};
+int decel[N] = {50,50,50,50,50,50,50,50,50,50,50,50,50};
+int accel[N] = {10,10,10,10,10,10,10,10,10,10,10,10,10};
+int amountOfAlreadySet = 11 ;
 int stopDistance[N];
 int newSpeed[N];
 int currentSpeed[N];
@@ -494,11 +494,11 @@ amountOfAlreadySet++</label>
 	</template>
 	<system>// Place template instantiations here.
 
-const int pid[N] = {0}; 
-const int speed[N] = {160};
-const int desiredSpeed[N] = {0};
-const int maxSpeed[N] = {160};
-const int setSpeed[N] = {1};
+const int pid[N] = {8,5,7,6,2,0,6,3,4,1,9,1,9}; 
+const int speed[N] = {160,160,160,160,160,160,160,160,160,160,160,160,140};
+const int desiredSpeed[N] = {160,160,160,160,160,160,160,160,160,160,160,0,0};
+const int maxSpeed[N] = {160,160,160,160,160,160,160,160,160,160,160,160,160};
+const int setSpeed[N] = {0,0,0,0,0,0,0,0,0,0,0,1,1};
 
 
 

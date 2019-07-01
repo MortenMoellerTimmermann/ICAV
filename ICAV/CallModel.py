@@ -76,7 +76,7 @@ def getStrategy(outStr, cars):
         #carSpeeds.append(float(strategoGetSubString(outStr,strStart)))
         carSpeeds.append(float(standardGetSubString(outStr,strStart)) / Scaler)
 
-    print("new speeds:" + str(carSpeeds))
+    print("\nNew speeds:" + str(carSpeeds) +"\n")
  
     return carSpeeds
 
@@ -205,9 +205,9 @@ def createModel(master_model,expId,simStep,cars):
     str_model = str.replace(str_model, toReplace, value, 1)
 
     toReplace = "//HOLDER_CAR_ALREADYSET"
+    value = 0
     for i in range (0,len(cars)):
-        value = 0
-        if(cars[i][11] == 1):
+        if(cars[i][11] == 0):
             value = value + 1
     str_model = str.replace(str_model, toReplace, str(value), 1)
 

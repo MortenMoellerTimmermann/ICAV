@@ -191,12 +191,20 @@ def run(options):
                                 ShouldCall)
                     ListOfCars.append(carTuple)
                     #print("x: " + str(traci.vehicle.getPosition(det[i])[0]) + " y: " + str(traci.vehicle.getPosition(det[i])[1]))
-
-    
+            
             ListOfCars = list(set(ListOfCars))
             ListOfCarIDs = list(set(ListOfCarIDs))
-            ListOfCars.sort(key=lambda tup: tup[11], reverse=True)
+            ListOfCars.sort(key=lambda tup: tup[11], reverse=False)
+
+            amountGettingSpeed = 0
+            for i in range(0, len(ListOfCars)):
+                if(ListOfCars[i][11] == 1):
+                    amountGettingSpeed = amountGettingSpeed + 1
+
             #print(ListOfCars)
+            print("Amount of cars: " + str(len(ListOfCars)) + " - Cars getting a speed assigned: " + str(amountGettingSpeed))
+            print("Of the format: [carID, lenght, width, x-pos, y-pos, route, decel, accel, maxspeed, speedSet]")
+            print(ListOfCars)
 
 
             

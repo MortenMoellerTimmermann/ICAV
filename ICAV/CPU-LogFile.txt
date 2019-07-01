@@ -1,5 +1,1 @@
 -- CPU-LOGFILE --
-simStep: 35
- CPU user time used : 0 ms\r\n 
-
-
