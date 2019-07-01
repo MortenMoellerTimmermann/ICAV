@@ -203,7 +203,7 @@ def run(options):
 
             #print(ListOfCars)
             print("Amount of cars: " + str(len(ListOfCars)) + " - Cars getting a speed assigned: " + str(amountGettingSpeed))
-            print("Of the format: [carID, lenght, width, x-pos, y-pos, route, decel, accel, maxspeed, speedSet]")
+            print("Of the format: [carID, speed, lenght, width, x-pos, y-pos, route, decel, accel, maxspeed, speedSet]")
             print(ListOfCars)
 
 
@@ -284,8 +284,7 @@ def time_and_speed_in_network(CarList, indetectors):
                     car.TimeInNetwork += 1
                     car.TotalSpeed += traci.vehicle.getSpeed(det[i])
                     #print("Car: " + car.CarID + " - " + str(car.TimeInNetwork) + " ticks")
-
-                    
+         
 
 def add_additional_info_header(filename,legs):
     csvdata = "step,tlState"
