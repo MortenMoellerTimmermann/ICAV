@@ -1,271 +1,261 @@
 -- LOGFILE --
 simStep: 35
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981170\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055859\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
  States stored : 698 states\r\n 
  States explored : 682 states\r\n 
  CPU user time used : 0 ms\r\n 
- Virtual memory used : 29036 KiB\r\n 
- Resident memory used : 8952 KiB\r\nShowing example trace.\r\n'
+ Virtual memory used : 29320 KiB\r\n 
+ Resident memory used : 8988 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 38
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981171\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055860\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
  States stored : 717 states\r\n 
  States explored : 701 states\r\n 
  CPU user time used : 0 ms\r\n 
- Virtual memory used : 29072 KiB\r\n 
- Resident memory used : 9000 KiB\r\nShowing example trace.\r\n'
+ Virtual memory used : 29100 KiB\r\n 
+ Resident memory used : 9032 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 39
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981172\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055861\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 1439 states\r\n 
- States explored : 1408 states\r\n 
- CPU user time used : 0 ms\r\n 
- Virtual memory used : 29552 KiB\r\n 
- Resident memory used : 9232 KiB\r\nShowing example trace.\r\n'
+ States stored : 2973 states\r\n 
+ States explored : 2944 states\r\n 
+ CPU user time used : 31 ms\r\n 
+ Virtual memory used : 30100 KiB\r\n 
+ Resident memory used : 9632 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 42
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981175\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055865\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
  States stored : 726 states\r\n 
  States explored : 710 states\r\n 
- CPU user time used : 16 ms\r\n 
- Virtual memory used : 29472 KiB\r\n 
- Resident memory used : 9176 KiB\r\nShowing example trace.\r\n'
+ CPU user time used : 0 ms\r\n 
+ Virtual memory used : 29536 KiB\r\n 
+ Resident memory used : 9240 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 45
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981178\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055867\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 745 states\r\n 
- States explored : 729 states\r\n 
- CPU user time used : 0 ms\r\n 
- Virtual memory used : 29528 KiB\r\n 
- Resident memory used : 9220 KiB\r\nShowing example trace.\r\n'
+ States stored : 853 states\r\n 
+ States explored : 837 states\r\n 
+ CPU user time used : 16 ms\r\n 
+ Virtual memory used : 29640 KiB\r\n 
+ Resident memory used : 9312 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 46
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981180\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055870\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 768 states\r\n 
- States explored : 752 states\r\n 
+ States stored : 876 states\r\n 
+ States explored : 860 states\r\n 
  CPU user time used : 15 ms\r\n 
- Virtual memory used : 29688 KiB\r\n 
- Resident memory used : 9296 KiB\r\nShowing example trace.\r\n'
+ Virtual memory used : 29844 KiB\r\n 
+ Resident memory used : 9416 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 47
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981183\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055873\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 731 states\r\n 
- States explored : 715 states\r\n 
- CPU user time used : 0 ms\r\n 
- Virtual memory used : 29740 KiB\r\n 
- Resident memory used : 9344 KiB\r\nShowing example trace.\r\n'
+ States stored : 791 states\r\n 
+ States explored : 775 states\r\n 
+ CPU user time used : 16 ms\r\n 
+ Virtual memory used : 29828 KiB\r\n 
+ Resident memory used : 9416 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 48
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981185\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055876\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 750 states\r\n 
- States explored : 734 states\r\n 
+ States stored : 814 states\r\n 
+ States explored : 798 states\r\n 
  CPU user time used : 0 ms\r\n 
- Virtual memory used : 29840 KiB\r\n 
- Resident memory used : 9384 KiB\r\nShowing example trace.\r\n'
+ Virtual memory used : 29912 KiB\r\n 
+ Resident memory used : 9476 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 51
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981189\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055880\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 737 states\r\n 
- States explored : 721 states\r\n 
- CPU user time used : 15 ms\r\n 
- Virtual memory used : 29900 KiB\r\n 
- Resident memory used : 9424 KiB\r\nShowing example trace.\r\n'
+ States stored : 757 states\r\n 
+ States explored : 741 states\r\n 
+ CPU user time used : 16 ms\r\n 
+ Virtual memory used : 30008 KiB\r\n 
+ Resident memory used : 9524 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 52
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981192\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055884\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
  States stored : 768 states\r\n 
  States explored : 752 states\r\n 
- CPU user time used : 16 ms\r\n 
- Virtual memory used : 29976 KiB\r\n 
- Resident memory used : 9448 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 53
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981196\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 748 states\r\n 
- States explored : 732 states\r\n 
- CPU user time used : 15 ms\r\n 
- Virtual memory used : 30008 KiB\r\n 
- Resident memory used : 9472 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 54
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981200\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 767 states\r\n 
- States explored : 751 states\r\n 
- CPU user time used : 16 ms\r\n 
- Virtual memory used : 30112 KiB\r\n 
- Resident memory used : 9504 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 56
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981205\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 743 states\r\n 
- States explored : 727 states\r\n 
- CPU user time used : 0 ms\r\n 
- Virtual memory used : 30104 KiB\r\n 
- Resident memory used : 9496 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 57
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981209\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 775 states\r\n 
- States explored : 759 states\r\n 
- CPU user time used : 16 ms\r\n 
- Virtual memory used : 30108 KiB\r\n 
- Resident memory used : 9504 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 58
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981213\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 767 states\r\n 
- States explored : 751 states\r\n 
  CPU user time used : 31 ms\r\n 
- Virtual memory used : 30104 KiB\r\n 
- Resident memory used : 9496 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 59
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981218\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 754 states\r\n 
- States explored : 738 states\r\n 
- CPU user time used : 15 ms\r\n 
- Virtual memory used : 30212 KiB\r\n 
+ Virtual memory used : 30084 KiB\r\n 
  Resident memory used : 9552 KiB\r\nShowing example trace.\r\n'
 
 
-simStep: 60
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981223\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+simStep: 53
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055888\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 754 states\r\n 
- States explored : 738 states\r\n 
+ States stored : 812 states\r\n 
+ States explored : 796 states\r\n 
  CPU user time used : 0 ms\r\n 
- Virtual memory used : 30240 KiB\r\n 
- Resident memory used : 9568 KiB\r\nShowing example trace.\r\n'
+ Virtual memory used : 30128 KiB\r\n 
+ Resident memory used : 9580 KiB\r\nShowing example trace.\r\n'
+
+
+simStep: 54
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055894\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is satisfied.\r\n 
+ States stored : 831 states\r\n 
+ States explored : 815 states\r\n 
+ CPU user time used : 15 ms\r\n 
+ Virtual memory used : 30164 KiB\r\n 
+ Resident memory used : 9612 KiB\r\nShowing example trace.\r\n'
+
+
+simStep: 56
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055900\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is satisfied.\r\n 
+ States stored : 739 states\r\n 
+ States explored : 723 states\r\n 
+ CPU user time used : 15 ms\r\n 
+ Virtual memory used : 30108 KiB\r\n 
+ Resident memory used : 9572 KiB\r\nShowing example trace.\r\n'
+
+
+simStep: 57
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055905\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is satisfied.\r\n 
+ States stored : 842 states\r\n 
+ States explored : 826 states\r\n 
+ CPU user time used : 15 ms\r\n 
+ Virtual memory used : 30288 KiB\r\n 
+ Resident memory used : 9688 KiB\r\nShowing example trace.\r\n'
+
+
+simStep: 58
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055911\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is satisfied.\r\n 
+ States stored : 766 states\r\n 
+ States explored : 750 states\r\n 
+ CPU user time used : 0 ms\r\n 
+ Virtual memory used : 30220 KiB\r\n 
+ Resident memory used : 9640 KiB\r\nShowing example trace.\r\n'
+
+
+simStep: 59
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055915\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is satisfied.\r\n 
+ States stored : 774 states\r\n 
+ States explored : 758 states\r\n 
+ CPU user time used : 31 ms\r\n 
+ Virtual memory used : 30336 KiB\r\n 
+ Resident memory used : 9676 KiB\r\nShowing example trace.\r\n'
+
+
+simStep: 60
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055922\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is satisfied.\r\n 
+ States stored : 777 states\r\n 
+ States explored : 761 states\r\n 
+ CPU user time used : 16 ms\r\n 
+ Virtual memory used : 30412 KiB\r\n 
+ Resident memory used : 9728 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 61
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981228\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055931\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
  States stored : 753 states\r\n 
  States explored : 737 states\r\n 
- CPU user time used : 16 ms\r\n 
- Virtual memory used : 30216 KiB\r\n 
- Resident memory used : 9564 KiB\r\nShowing example trace.\r\n'
+ CPU user time used : 32 ms\r\n 
+ Virtual memory used : 30344 KiB\r\n 
+ Resident memory used : 9692 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 62
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981232\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055940\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 764 states\r\n 
- States explored : 748 states\r\n 
- CPU user time used : 16 ms\r\n 
- Virtual memory used : 30300 KiB\r\n 
- Resident memory used : 9620 KiB\r\nShowing example trace.\r\n'
+ States stored : 784 states\r\n 
+ States explored : 768 states\r\n 
+ CPU user time used : 47 ms\r\n 
+ Virtual memory used : 30388 KiB\r\n 
+ Resident memory used : 9752 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 64
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981238\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055951\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 2200 states\r\n 
- States explored : 2170 states\r\n 
- CPU user time used : 15 ms\r\n 
- Virtual memory used : 30896 KiB\r\n 
- Resident memory used : 10060 KiB\r\nShowing example trace.\r\n'
+ States stored : 2208 states\r\n 
+ States explored : 2178 states\r\n 
+ CPU user time used : 79 ms\r\n 
+ Virtual memory used : 31364 KiB\r\n 
+ Resident memory used : 10520 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 67
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981250\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055973\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 761 states\r\n 
- States explored : 745 states\r\n 
- CPU user time used : 0 ms\r\n 
- Virtual memory used : 30236 KiB\r\n 
- Resident memory used : 9576 KiB\r\nShowing example trace.\r\n'
+ States stored : 781 states\r\n 
+ States explored : 765 states\r\n 
+ CPU user time used : 16 ms\r\n 
+ Virtual memory used : 30436 KiB\r\n 
+ Resident memory used : 9740 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 68
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981255\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055983\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 748 states\r\n 
- States explored : 732 states\r\n 
- CPU user time used : 15 ms\r\n 
- Virtual memory used : 30252 KiB\r\n 
- Resident memory used : 9592 KiB\r\nShowing example trace.\r\n'
+ States stored : 732 states\r\n 
+ States explored : 716 states\r\n 
+ CPU user time used : 31 ms\r\n 
+ Virtual memory used : 30424 KiB\r\n 
+ Resident memory used : 9740 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 70
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981260\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562055993\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 764 states\r\n 
- States explored : 748 states\r\n 
- CPU user time used : 15 ms\r\n 
- Virtual memory used : 30304 KiB\r\n 
- Resident memory used : 9624 KiB\r\nShowing example trace.\r\n'
+ States stored : 828 states\r\n 
+ States explored : 812 states\r\n 
+ CPU user time used : 31 ms\r\n 
+ Virtual memory used : 30400 KiB\r\n 
+ Resident memory used : 9764 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 72
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981266\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562056005\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
  Formula is satisfied.\r\n 
- States stored : 1481 states\r\n 
- States explored : 1450 states\r\n 
- CPU user time used : 0 ms\r\n 
- Virtual memory used : 30512 KiB\r\n 
- Resident memory used : 9784 KiB\r\nShowing example trace.\r\n'
+ States stored : 1657 states\r\n 
+ States explored : 1626 states\r\n 
+ CPU user time used : 47 ms\r\n 
+ Virtual memory used : 30856 KiB\r\n 
+ Resident memory used : 10100 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 73
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981276\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562056025\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n 
  Formula is satisfied.\r\n 
- States stored : 3025 states\r\n 
- States explored : 2996 states\r\n 
- CPU user time used : 63 ms\r\n 
- Virtual memory used : 31264 KiB\r\n 
- Resident memory used : 10332 KiB\r\nShowing example trace.\r\n'
+ States stored : 58783 states\r\n 
+ States explored : 58754 states\r\n 
+ CPU user time used : 1438 ms\r\n 
+ Virtual memory used : 77632 KiB\r\n 
+ Resident memory used : 36496 KiB\r\nShowing example trace.\r\n'
 
 
 simStep: 74
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981290\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 1557 states\r\n 
- States explored : 1542 states\r\n 
- CPU user time used : 31 ms\r\n 
- Virtual memory used : 30724 KiB\r\n 
- Resident memory used : 9916 KiB\r\nShowing example trace.\r\n'
-
-
-simStep: 76
-b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1561981298\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
- Formula is satisfied.\r\n 
- States stored : 763 states\r\n 
- States explored : 747 states\r\n 
- CPU user time used : 31 ms\r\n 
- Virtual memory used : 30464 KiB\r\n 
- Resident memory used : 9704 KiB\r\nShowing example trace.\r\n'
+b'Options for the verification:\r\n  Generating some trace\r\n  Search order is depth first\r\n  Using conservative space optimisation\r\n  Seed is 1562056051\r\n  State space representation uses minimal constraint systems\r\n\x1b[2K\r\nVerifying formula 1 at C:\\Users\\Alexander Bilgram\\Desktop\\ICAV\\ICAV\\Uppaal\\ICAV.q:6\r\n\x1b[2K 
+ Formula is NOT satisfied.\r\n 
+ States stored : 19325 states\r\n 
+ States explored : 19325 states\r\n 
+ CPU user time used : 547 ms\r\n 
+ Virtual memory used : 40460 KiB\r\n 
+ Resident memory used : 18412 KiB\r\n'
 
 

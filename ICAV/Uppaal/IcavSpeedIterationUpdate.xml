@@ -20,11 +20,12 @@ int cur = 0;
 int SoftCrashDetected = 0;
 
 int ClockScaler = 10;
+
+int y;
 </declaration>
 	<template>
 		<name>Timer</name>
 		<declaration>clock x;
-clock y;
 
 
 </declaration>
@@ -38,7 +39,7 @@ clock y;
 			<target ref="id0"/>
 			<label kind="guard" x="-224" y="-112">x == 1</label>
 			<label kind="synchronisation" x="-224" y="-97">go!</label>
-			<label kind="assignment" x="-224" y="-128">x = 0</label>
+			<label kind="assignment" x="-224" y="-128">x = 0, y++</label>
 			<nail x="-128" y="-64"/>
 			<nail x="-296" y="-64"/>
 		</transition>
@@ -223,23 +224,26 @@ void UpdatePos(){
 
 void CheckSpeedUpdate(){
     int i = 0;
-    for(i = 0; i &lt; amountOfAlreadySet; i++){
-        if(currentSpeed[i] &lt; newSpeed[i]){
-            if((currentSpeed[i] + (accel[i] / ClockScaler)) &lt; newSpeed[i]){
-                currentSpeed[i] = currentSpeed[i] + (accel[i] / ClockScaler);
+    if(y % 10 == 0){
+        for(i = 0; i &lt; amountOfAlreadySet; i++){
+            if(currentSpeed[i] &lt; newSpeed[i]){
+                if((currentSpeed[i] + (accel[i] / ClockScaler)) &lt; newSpeed[i]){
+                    currentSpeed[i] = currentSpeed[i] + (accel[i] / ClockScaler);
+                }
+                else{
+                    currentSpeed[i] = newSpeed[i];
+                }
             }
-            else{
-                currentSpeed[i] = newSpeed[i];
+            if(currentSpeed[i] &gt;= newSpeed[i]){
+                if((currentSpeed[i] - (decel[i] / ClockScaler)) &gt; newSpeed[i]){
+                    currentSpeed[i] = currentSpeed[i] - (decel[i] / ClockScaler);
+                }
+                else{
+                    currentSpeed[i] = newSpeed[i];
+                }    
             }
         }
-        if(currentSpeed[i] &gt;= newSpeed[i]){
-            if((currentSpeed[i] - (decel[i] / ClockScaler)) &gt; newSpeed[i]){
-                currentSpeed[i] = currentSpeed[i] - (decel[i] / ClockScaler);
-            }
-            else{
-                currentSpeed[i] = newSpeed[i];
-            }
-        }
+    y = 0;
     }
 }
 
@@ -373,7 +377,8 @@ void SyncCarSpeed(){
 			<target ref="id8"/>
 			<label kind="synchronisation" x="-93" y="59">SpeedSet?</label>
 			<label kind="assignment" x="-93" y="76">SyncCarSpeed(),
-amountOfAlreadySet++</label>
+amountOfAlreadySet++,
+y = 0</label>
 		</transition>
 		<transition>
 			<source ref="id14"/>
