@@ -8,23 +8,23 @@ simStep: 38
 
 
 simStep: 40
- CPU user time used : 10 ms\n 
+ CPU user time used : 0 ms\n 
 
 
 simStep: 42
- CPU user time used : 0 ms\n 
+ CPU user time used : 10 ms\n 
 
 
 simStep: 44
- CPU user time used : 0 ms\n 
+ CPU user time used : 10 ms\n 
 
 
 simStep: 45
- CPU user time used : 0 ms\n 
+ CPU user time used : 10 ms\n 
 
 
 simStep: 47
- CPU user time used : 10 ms\n 
+ CPU user time used : 0 ms\n 
 
 
 simStep: 48
@@ -32,7 +32,7 @@ simStep: 48
 
 
 simStep: 51
- CPU user time used : 30 ms\n 
+ CPU user time used : 20 ms\n 
 
 
 simStep: 53
@@ -44,7 +44,7 @@ simStep: 54
 
 
 simStep: 55
- CPU user time used : 10 ms\n 
+ CPU user time used : 0 ms\n 
 
 
 simStep: 57
@@ -56,15 +56,15 @@ simStep: 58
 
 
 simStep: 60
- CPU user time used : 10 ms\n 
+ CPU user time used : 0 ms\n 
 
 
 simStep: 62
- CPU user time used : 10 ms\n 
+ CPU user time used : 20 ms\n 
 
 
 simStep: 63
- CPU user time used : 20 ms\n 
+ CPU user time used : 10 ms\n 
 
 
 simStep: 65
@@ -81,113 +81,5 @@ simStep: 67
 
 simStep: 68
  CPU user time used : 10 ms\n 
-
-
-simStep: 71
- CPU user time used : 10 ms\n 
-
-
-simStep: 72
- CPU user time used : 20 ms\n 
-
-
-simStep: 73
- CPU user time used : 10 ms\n 
-
-
-simStep: 74
- CPU user time used : 10 ms\n 
-
-
-simStep: 75
- CPU user time used : 20 ms\n 
-
-
-simStep: 77
- CPU user time used : 50 ms\n 
-
-
-simStep: 79
- CPU user time used : 20 ms\n 
-
-
-simStep: 81
- CPU user time used : 10 ms\n 
-
-
-simStep: 83
- CPU user time used : 20 ms\n 
-
-
-simStep: 84
- CPU user time used : 10 ms\n 
-
-
-simStep: 87
- CPU user time used : 30 ms\n 
-
-
-simStep: 89
- CPU user time used : 40 ms\n 
-
-
-simStep: 91
- CPU user time used : 10 ms\n 
-
-
-simStep: 93
- CPU user time used : 0 ms\n 
-
-
-simStep: 94
- CPU user time used : 10 ms\n 
-
-
-simStep: 95
- CPU user time used : 10 ms\n 
-
-
-simStep: 96
- CPU user time used : 10 ms\n 
-
-
-simStep: 97
- CPU user time used : 10 ms\n 
-
-
-simStep: 99
- CPU user time used : 10 ms\n 
-
-
-simStep: 100
- CPU user time used : 20 ms\n 
-
-
-simStep: 101
- CPU user time used : 10 ms\n 
-
-
-simStep: 102
- CPU user time used : 0 ms\n 
-
-
-simStep: 104
- CPU user time used : 20 ms\n 
-
-
-simStep: 105
- CPU user time used : 10 ms\n 
-
-
-simStep: 106
- CPU user time used : 10 ms\n 
-
-
-simStep: 107
- CPU user time used : 10 ms\n 
-
-
-simStep: 109
- CPU user time used : 8900 ms\n 
 
 
