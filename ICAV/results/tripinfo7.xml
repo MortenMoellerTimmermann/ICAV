@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/02/19 11:13:13 by Eclipse SUMO GUI Version 1.1.0
+<!-- generated on Tue 02 Jul 2019 11:29:14 AM CEST by Eclipse SUMO GUI Version 1.2.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -34,6 +34,9 @@
 -->
 
 <tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+<<<<<<< HEAD
     <tripinfo id="car0" depart="2.00" departLane="Road3_0" departPos="3.10" departSpeed="0.00" departDelay="0.00" arrival="74.00" arrivalLane="Road4_out_0" arrivalPos="492.80" arrivalSpeed="16.00" duration="72.00" routeLength="996.90" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="10.35" rerouteNo="0" devices="tripinfo_car0" vType="Car@car0" speedFactor="1.00" vaporized=""/>
     <tripinfo id="car3" depart="5.00" departLane="Road4_0" departPos="3.10" departSpeed="0.00" departDelay="0.00" arrival="77.00" arrivalLane="Road3_out_0" arrivalPos="492.80" arrivalSpeed="16.00" duration="72.00" routeLength="996.90" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="11.15" rerouteNo="0" devices="tripinfo_car3" vType="Car@car3" speedFactor="1.00" vaporized=""/>
+=======
+>>>>>>> b62b5eff4a88b03aa6bad52afb45e34b712afb12
 </tripinfos>
