@@ -228,7 +228,7 @@ void CheckSpeedUpdate(){
         for(i = 0; i &lt; amountOfAlreadySet; i++){
             if(currentSpeed[i] &lt; newSpeed[i]){
                 if((currentSpeed[i] + (accel[i] / ClockScaler)) &lt; newSpeed[i]){
-                    currentSpeed[i] = currentSpeed[i] + (accel[i] / ClockScaler);
+                    currentSpeed[i] = currentSpeed[i] + accel[i];
                 }
                 else{
                     currentSpeed[i] = newSpeed[i];
@@ -236,7 +236,7 @@ void CheckSpeedUpdate(){
             }
             if(currentSpeed[i] &gt;= newSpeed[i]){
                 if((currentSpeed[i] - (decel[i] / ClockScaler)) &gt; newSpeed[i]){
-                    currentSpeed[i] = currentSpeed[i] - (decel[i] / ClockScaler);
+                    currentSpeed[i] = currentSpeed[i] - decel[i];
                 }
                 else{
                     currentSpeed[i] = newSpeed[i];

@@ -2,6 +2,6 @@ import sys
 import os
 from os.path import expanduser
 
-home =  "\"" + expanduser("~")
-veri = home + '\\Desktop\\uppaal-4.1.22\\bin-Windows\\verifyta' + "\""
+home =  expanduser("~")
+veri = home + "/Downloads/uppaal64-4.1.22/bin-Linux/verifyta"
 
