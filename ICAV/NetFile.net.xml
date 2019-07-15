@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/01/19 12:27:42 by Eclipse SUMO netconvert Version 1.1.0
+<!-- generated on 07/04/19 10:50:23 by Eclipse SUMO netedit Version 1.1.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <node-files value="NodeFile.nod.xml"/>
-        <edge-files value="EdgeFile.edg.xml"/>
-        <type-files value="TypeFile.type.xml"/>
+        <sumo-net-file value="C:\Users\Alexander%20Bilgram\Desktop\ICAV\ICAV\NetFile.net.xml"/>
     </input>
 
     <output>
-        <output-file value="NetFile.net.xml"/>
+        <output-file value="C:\Users\Alexander%20Bilgram\Desktop\ICAV\ICAV\NetFile.net.xml"/>
     </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
 
 </configuration>
 -->

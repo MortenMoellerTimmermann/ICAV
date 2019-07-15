@@ -9,6 +9,7 @@ import random
 import time
 import math
 import copy
+import re
 #import pandas as pd
 
 # we need to import python modules from the $SUMO_HOME/tools directory
@@ -22,6 +23,7 @@ from sumolib import checkBinary
 import traci
 from CallModel import modelCaller
 from RouteDict import route_dictionary
+from xml.dom import minidom
 
 # the port used for communicating with your sumo instance
 PORT = 8873
@@ -39,8 +41,12 @@ Scaler = 10
 
 def run(options):
     """execute the TraCI control loop"""
-    print("starting run")
     traci.init(options.port)
+    print("Configuring intersection")
+
+    GenerateFlowForIntersection(pathToModels, options.sumocfg)
+
+    print("starting run")
     step = 0
     numDetectors = 8
     carsPassed = [0] * numDetectors
@@ -205,6 +211,7 @@ def run(options):
             print("Amount of cars: " + str(len(ListOfCars)) + " - Cars getting a speed assigned: " + str(amountGettingSpeed))
             print("Of the format: [carID, speed, length, width, x-pos, y-pos, route, decel, accel, maxspeed, desiredspeed, speedSet]")
             print(ListOfCars)
+            
 
 
             
@@ -307,6 +314,28 @@ def get_messurements(legs, detLegH, jamCarLegH, jamMetLegH, funJamCar, funJamMet
     return jamCarLegH, jamMetLegH
     
 
+def GenerateFlowForIntersection(pathToModel, cfg):
+    listofIds = traci.route.getIDList()
+
+    cfgfile = minidom.parse(cfg)
+    netfile = cfgfile.getElementsByTagName('net-file')
+
+    nfile = minidom.parse(netfile[0].attributes['value'].value)
+    connections = nfile.getElementsByTagName('connection')
+
+    for connection in connections:
+        if(connection.hasAttribute('via')):
+            print(connection.attributes['via'].value) 
+
+    
+    shapeIds = traci.lane.getIDList()
+    for i in range(0,len(shapeIds)):
+        laneShape = traci.lane.getShape(shapeIds[i])
+        print(str(shapeIds[i]) + " " + str(laneShape))
+        #print(traci.route.getEdges(shapeIds[i]))
+        
+
+
 def save_results(expid,controller,scenario,totalSimTime, legs, jamCarLegH, jamMetLegH):
     numLegs = len(legs)
     totalJamMeters = 0.0
@@ -331,7 +360,6 @@ def save_results(expid,controller,scenario,totalSimTime, legs, jamCarLegH, jamMe
     with open(filename, 'w') as f:        
         f.write(csvdata)
         f.close()
-    
 
 def countJam(carsJammed):
     numDet = len(carsJammed) 
