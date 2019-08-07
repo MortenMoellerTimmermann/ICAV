@@ -38,6 +38,8 @@ xData = []
 yData = []
 Scaler = 10
 
+IcavTempModel = ''
+
 
 def run(options):
     """execute the TraCI control loop"""
@@ -316,6 +318,9 @@ def get_messurements(legs, detLegH, jamCarLegH, jamMetLegH, funJamCar, funJamMet
 
 def GenerateFlowForIntersection(pathToModel, cfg):
     listofIds = traci.route.getIDList()
+    ListOfRoutes = []
+    ListOfRouteNames = []
+
 
     cfgfile = minidom.parse(cfg)
     netfile = cfgfile.getElementsByTagName('net-file')
@@ -325,16 +330,66 @@ def GenerateFlowForIntersection(pathToModel, cfg):
 
     for connection in connections:
         if(connection.hasAttribute('via')):
-            print(connection.attributes['via'].value) 
+            RouteFrom = connection.attributes['from'].value
+            RouteVia = connection.attributes['via'].value
+            RouteTo = connection.attributes['to'].value
+            
+            for i in range(0, traci.edge.getLaneNumber(RouteFrom)):
+                Route = []
+                FromShape = traci.lane.getShape(RouteFrom + '_' + str(i))
+                ToShape = traci.lane.getShape(RouteTo + '_' + str(i))
+                ViaShape = traci.lane.getShape(RouteVia)
 
-    
-    shapeIds = traci.lane.getIDList()
-    for i in range(0,len(shapeIds)):
-        laneShape = traci.lane.getShape(shapeIds[i])
-        print(str(shapeIds[i]) + " " + str(laneShape))
-        #print(traci.route.getEdges(shapeIds[i]))
+                for j in range(0,len(FromShape)):
+                    Route.append(FromShape[j])
+                for j in range(0,len(ViaShape)):
+                    Route.append(ViaShape[j])
+                for j in range(0,len(ToShape)):
+                    Route.append(ToShape[j])
+
+                ListOfRoutes.append(Route)
+                ListOfRouteNames.append(str(re.findall(r'\d+', RouteFrom)[0]) + str(re.findall(r'\d+', RouteTo)[0]) + str(i))
+                
+                    
+    for i in range(0, len(ListOfRoutes)):
+        ListOfRoutes[i] = list(set(ListOfRoutes[i]))
+        for j in range(0,len(ListOfRoutes[i])):
+            ListOfRoutes[i][j] = list(ListOfRoutes[i][j])
+            for k in range(0,len(ListOfRoutes[i][j])):
+                ListOfRoutes[i][j][k] = int(ListOfRoutes[i][j][k] * Scaler)
+            ListOfRoutes[i][j] = tuple(ListOfRoutes[i][j])
+
+    print(ListOfRouteNames)
+    GiveUppaalInfo(ListOfRoutes, ListOfRouteNames)
+
+def GiveUppaalInfo(Routes, RouteNames):
+    fo = open(icavModel, "r+")
+    str_model = fo.read()
+    fo.close()
+
+    toReplace = "//HOLDER_AMOUNT_OF_ROUTES"
+    value = str(len(RouteNames)) + ';'
+    str_model = str.replace(str_model, toReplace, value, 1)
+
+    toReplace = "//HOLDER_ROUTES"
+    value = ""
+    for i in range (0,len(RouteNames)):
+        valueString = str(Routes[i]) + '; \n'
+        valueString = valueString.replace('[','{')
+        valueString = valueString.replace(']','}')
+        valueString = valueString.replace('(','{')
+        valueString = valueString.replace(')','}')
+        value += 'point Route' + RouteNames[i] + '[' + str(len(Routes[i])) + '] ' + ' = ' + valueString
         
+    str_model = str.replace(str_model, toReplace, value, 1)
 
+    modelName = os.path.join(pathToModels, 'tempModel' + str(options.expid) + '.xml')
+    text_file = open(modelName, "w")
+    text_file.write(str_model)
+    text_file.close()
+    IcavTempModel = modelName
+
+        
 
 def save_results(expid,controller,scenario,totalSimTime, legs, jamCarLegH, jamMetLegH):
     numLegs = len(legs)

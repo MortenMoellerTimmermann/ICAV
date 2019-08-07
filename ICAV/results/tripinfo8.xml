@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/15/19 12:04:59 by Eclipse SUMO GUI Version 1.1.0
+<!-- generated on 08/07/19 11:28:42 by Eclipse SUMO GUI Version 1.1.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -9,8 +9,8 @@
     </input>
 
     <output>
-        <emission-output value="results/emission1.xml"/>
-        <tripinfo-output value="results/tripinfo1.xml"/>
+        <emission-output value="results/emission8.xml"/>
+        <tripinfo-output value="results/tripinfo8.xml"/>
     </output>
 
     <time>
