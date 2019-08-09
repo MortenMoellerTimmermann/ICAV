@@ -38,6 +38,9 @@ xData = []
 yData = []
 Scaler = 10
 
+ListOfRoutes = []
+ListOfRouteNames = []
+centerOfInterscetion = (0,0)
 IcavTempModel = ''
 
 
@@ -46,7 +49,7 @@ def run(options):
     traci.init(options.port)
     print("Configuring intersection")
 
-    GenerateFlowForIntersection(pathToModels, options.sumocfg)
+    IcavTempModel, centerOfInterscetion = GenerateFlowForIntersection(pathToModels, options.sumocfg)
 
     print("starting run")
     step = 0
@@ -148,7 +151,7 @@ def run(options):
             ShouldCallModel = False
             GapDistance = 5
 
-            MiddleCoordinates = [500, 500]
+            MiddleCoordinates = list(centerOfInterscetion)
             CarCoordinates = []
             CarsInNetworkList = traci.vehicle.getIDList()
 
@@ -191,15 +194,17 @@ def run(options):
                                 int(round(traci.vehicle.getWidth(Car))*Scaler), 
                                 int(round((traci.vehicle.getPosition(Car)[0]))*Scaler),
                                 int(round((traci.vehicle.getPosition(Car)[1]))*Scaler),
-                                int(route_dictionary[traci.vehicle.getRoute(Car)]),
+                                traci.vehicle.getRoute(Car),
                                 int(round(traci.vehicle.getDecel(Car))*Scaler),
                                 int(round(traci.vehicle.getAccel(Car))*Scaler),
                                 int(round(traci.vehicle.getMaxSpeed(Car))*Scaler),
                                 int(round((DictOfDesiredSpeeds[Car] if Car in DictOfDesiredSpeeds.keys() else 0),2)*Scaler),
-                                ShouldCall)
+                                ShouldCall,
+                                traci.vehicle.getLaneID(Car)[-1:])
                     ListOfCars.append(carTuple)
                     #print("x: " + str(traci.vehicle.getPosition(det[i])[0]) + " y: " + str(traci.vehicle.getPosition(det[i])[1]))
             
+
             ListOfCars = list(set(ListOfCars))
             ListOfCarIDs = list(set(ListOfCarIDs))
             ListOfCars.sort(key=lambda tup: tup[11], reverse=False)
@@ -214,8 +219,6 @@ def run(options):
             print("Of the format: [carID, speed, length, width, x-pos, y-pos, route, decel, accel, maxspeed, desiredspeed, speedSet]")
             print(ListOfCars)
             
-
-
             
             #Calling Uppaal with the modelcaller function
             for i in range(0,len(ListOfCarIDs)):
@@ -225,7 +228,7 @@ def run(options):
             # or (step % 15 == 0 and LastCalled >= 8) Used if the model needs to be called in intervals as well
 
             if(ShouldCallModel):
-                speedFromModel = modelCaller(icavModel, icavQuery, options.expid, step, ListOfCars)
+                speedFromModel = modelCaller(IcavTempModel, icavQuery, options.expid, step, ListOfCars, ListOfRoutes, ListOfRouteNames,centerOfInterscetion, FindMaxListLength(ListOfRoutes))
                 changeCarSpeeds(ListOfCars, speedFromModel)
                 LastCalled = 0
                 for i in range(0,len(ListOfCarIDs)):
@@ -303,7 +306,7 @@ def add_additional_info_header(filename,legs):
     filename.write(csvdata)
 
 def euclidian(CarCoordinates, MiddleCoordinates):
-    return math.sqrt(((CarCoordinates[0] - MiddleCoordinates[0]) ** 2) + ((CarCoordinates[1] - MiddleCoordinates[1]) ** 2))
+    return math.sqrt(((CarCoordinates[0] - float(MiddleCoordinates[0])) ** 2) + ((CarCoordinates[1] - float(MiddleCoordinates[1])) ** 2))
     
 def get_messurements(legs, detLegH, jamCarLegH, jamMetLegH, funJamCar, funJamMet):
     numLegs = len(legs)
@@ -318,16 +321,29 @@ def get_messurements(legs, detLegH, jamCarLegH, jamMetLegH, funJamCar, funJamMet
 
 def GenerateFlowForIntersection(pathToModel, cfg):
     listofIds = traci.route.getIDList()
-    ListOfRoutes = []
-    ListOfRouteNames = []
-
 
     cfgfile = minidom.parse(cfg)
     netfile = cfgfile.getElementsByTagName('net-file')
 
     nfile = minidom.parse(netfile[0].attributes['value'].value)
     connections = nfile.getElementsByTagName('connection')
+    junctions = nfile.getElementsByTagName('junction')
+    LongestJunctions = 0
+    currentCenterPoint = (0,0)
 
+    #Find center of junction
+    for junction in junctions:
+        if(junction.hasAttribute('incLanes')):
+            if(len(junction.attributes['incLanes'].value) > LongestJunctions):
+                LongestJunctions = len(junction.attributes['incLanes'].value)
+                lst = list(currentCenterPoint)
+                lst[0] = junction.attributes['x'].value
+                lst[1] = junction.attributes['y'].value
+                currentCenterPoint = tuple(lst)
+
+    CenterOfInterscetion = currentCenterPoint
+
+    #Create the names of each route
     for connection in connections:
         if(connection.hasAttribute('via')):
             RouteFrom = connection.attributes['from'].value
@@ -348,21 +364,28 @@ def GenerateFlowForIntersection(pathToModel, cfg):
                     Route.append(ToShape[j])
 
                 ListOfRoutes.append(Route)
-                ListOfRouteNames.append(str(re.findall(r'\d+', RouteFrom)[0]) + str(re.findall(r'\d+', RouteTo)[0]) + str(i))
-                
-                    
+                ListOfRouteNames.append('From' + RouteFrom + 'To' + RouteTo + 'On' + str(i))
+     
+    #Remove Duplicates 
     for i in range(0, len(ListOfRoutes)):
         ListOfRoutes[i] = list(set(ListOfRoutes[i]))
+
+    maxListLenght = FindMaxListLength(ListOfRoutes)
+
+    #Scale each element and fill each list to have the same amount of elements
+    for i in range(0, len(ListOfRoutes)):
         for j in range(0,len(ListOfRoutes[i])):
             ListOfRoutes[i][j] = list(ListOfRoutes[i][j])
             for k in range(0,len(ListOfRoutes[i][j])):
                 ListOfRoutes[i][j][k] = int(ListOfRoutes[i][j][k] * Scaler)
             ListOfRoutes[i][j] = tuple(ListOfRoutes[i][j])
+            
+        while(len(ListOfRoutes[i]) < maxListLenght):
+            ListOfRoutes[i].append((32767,32767))
 
-    print(ListOfRouteNames)
-    GiveUppaalInfo(ListOfRoutes, ListOfRouteNames)
+    return GiveUppaalInfo(ListOfRoutes, ListOfRouteNames, maxListLenght), CenterOfInterscetion
 
-def GiveUppaalInfo(Routes, RouteNames):
+def GiveUppaalInfo(Routes, RouteNames, maxListLenght):
     fo = open(icavModel, "r+")
     str_model = fo.read()
     fo.close()
@@ -379,7 +402,7 @@ def GiveUppaalInfo(Routes, RouteNames):
         valueString = valueString.replace(']','}')
         valueString = valueString.replace('(','{')
         valueString = valueString.replace(')','}')
-        value += 'point Route' + RouteNames[i] + '[' + str(len(Routes[i])) + '] ' + ' = ' + valueString
+        value += 'const point ' + RouteNames[i] + '[' + str(maxListLenght) + ']' + ' = ' + valueString
         
     str_model = str.replace(str_model, toReplace, value, 1)
 
@@ -387,10 +410,14 @@ def GiveUppaalInfo(Routes, RouteNames):
     text_file = open(modelName, "w")
     text_file.write(str_model)
     text_file.close()
-    IcavTempModel = modelName
+    return modelName
 
+def FindMaxListLength(lst): 
+    maxList = max(lst, key = len) 
+    maxLength = max(map(len, lst)) 
+      
+    return maxLength 
         
-
 def save_results(expid,controller,scenario,totalSimTime, legs, jamCarLegH, jamMetLegH):
     numLegs = len(legs)
     totalJamMeters = 0.0

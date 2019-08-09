@@ -46,8 +46,8 @@ def runModel(com, args, query, simStep):
     #out = f.read()
     return outerror
 
-def modelCaller(model,query,expId,simStep,cars):
-    newModel = createModel(model,expId,simStep,cars)
+def modelCaller(model,query,expId,simStep,cars,routes,routenames,center, maxListLenght):
+    newModel = createModel(model,expId,simStep,cars,routes,routenames,center,maxListLenght)
     veri = VP.veri
     com = veri +  ' -o 1 -t 0 -u '
     args = "\"" + newModel + "\" "
@@ -99,7 +99,7 @@ def standardGetSubString(outStr, key):
     value = (outStr[start:end]).strip()
     return value[1:]
 
-def createModel(master_model,expId,simStep,cars):
+def createModel(master_model,expId,simStep,cars,routes,routenames,center,maxListLenght):
     fo = open(master_model, "r+")
     str_model = fo.read()
     fo.close()
@@ -159,7 +159,14 @@ def createModel(master_model,expId,simStep,cars):
     toReplace = "//HOLDER_CAR_ROUTE"
     value = "{"
     for i in range (0,len(cars)):
-        value += str(cars[i][6]) + ","
+        RouteToFind = 'From' + str(cars[i][6][0]) + 'To' + str(cars[i][6][1]) + 'On' + str(cars[i][12][-1:])
+        RouteIndex = routenames.index(RouteToFind)
+        RouteInformation = str(routes[RouteIndex])
+        RouteInformation = RouteInformation.replace('[','{')
+        RouteInformation = RouteInformation.replace(']','}')
+        RouteInformation = RouteInformation.replace('(','{')
+        RouteInformation = RouteInformation.replace(')','}')
+        value += RouteInformation + ","
     value = value[:-1]
     value += "};"
     str_model = str.replace(str_model, toReplace, value, 1)
@@ -211,9 +218,22 @@ def createModel(master_model,expId,simStep,cars):
             value = value + 1
     str_model = str.replace(str_model, toReplace, str(value), 1)
 
-
     toReplace = "//HOLDER_SIM_STEP"
     value = "int sim_step = " + str(simStep) + ";"
+    str_model = str.replace(str_model, toReplace, value, 1)
+        
+    toReplace = "//HOLDER_CENTER_INTERSECTION_X"
+    centerX = float(center[0])*Scaler
+    value = str(centerX) + ';'
+    str_model = str.replace(str_model, toReplace, value, 1)
+
+    toReplace = "//HOLDER_CENTER_INTERSECTION_Y"
+    centerY = float(center[1])*Scaler
+    value = str(centerY) + ';'
+    str_model = str.replace(str_model, toReplace, value, 1)
+
+    toReplace = "//MAX_LIST_LENGHT"
+    value = str(maxListLenght) + ';'
     str_model = str.replace(str_model, toReplace, value, 1)
 
     modelName = os.path.join(pathToModels, 'tempModel' + str(expId) + '.xml')
