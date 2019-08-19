@@ -137,6 +137,9 @@ int prevPosX[N];
 int prevPosY[N];
 double distance[N] ;
 point route[N][MaxListLenght] = //HOLDER_CAR_ROUTE
+point nextStepPoints[N][MaxListLenght];
+int amountOfLinesTraversed[N];
+int lineIndex[MaxListLenght];
 int decel[N] = //HOLDER_CAR_DECEL
 int accel[N] = //HOLDER_CAR_ACCEL
 int amountOfAlreadySet = //HOLDER_CAR_ALREADYSET ;
@@ -200,13 +203,22 @@ void UpdatePos(){
     int checker = 1;
 	double a = 0.0, b = 0.0, dotProduct = 0.0, determinant = 0.0, angleInRadians = 0.0, TimeToNextLine = 0.0, nextPosx = 0.0, nextPosy = 0.0;
     for(i = 0; i &lt; amountOfAlreadySet; i++){
+		int amountOfLines = 0;
         if(done[i] == 0){
-			double remainingTime = 1;
+			prevPosX[i] = posx[i];
+			prevPosY[i] = posy[i];
+			double remainingTime = 1.0;
 			for(j = 0; j &lt; MaxListLenght; j++){
                 while(remainingTime &gt; 0){
-					if(route[i][j].x &lt; 32767){ 
-						a = (route[i][j+1].y - route[i][j].y) / (route[i][j+1].x - route[i][j].x);
-						b = route[i][j].y - (a * route[i][j].x);
+					if(route[i][j].x &lt; 32767){
+						if(route[i][j+1].x == route[i][j].x){
+							a = 0;
+							b = route[i][j].y; 
+						} 
+						else{
+							a = (route[i][j+1].y - route[i][j].y) / (route[i][j+1].x - route[i][j].x);
+							b = route[i][j].y - (a * route[i][j].x);
+						}
 						if(posy[i] == ((a * posx[i]) + b)) {
 							carVectorX = route[i][j+1].x - route[i][j].x;
 							carVectorY = route[i][j+1].y - route[i][j].y;
@@ -225,14 +237,19 @@ void UpdatePos(){
 
 								posx[i] = route[i][j+1].x;
 								posy[i] = route[i][j+1].y;
-								j++;
+								j = j + 1;
 
+								amountOfLines = amountOfLines + 1;
 								//Save information for rectangle creation later - Bliver en anden god gang
 							}
 							else{
                             	remainingTime = 0;
-								posx[i] = nextPosx;
-								posy[i] = nextPosy;
+								posx[i] = fint(nextPosx);
+								posy[i] = fint(nextPosy);	
+
+								amountOfLines = amountOfLines + 1;
+								lineIndex[i] = j;
+								amountOfLinesTraversed[i] = amountOfLines;
                          	}
 						}
 					}
@@ -302,6 +319,28 @@ void CheckSpeedUpdate(){
     }
 }
 
+void CheckForCrashesNew(){
+	int i = 0, j = 0;
+	double aOriginalLine = 0.0, bOriginalLine = 0.0, aPerpendicularLine = 0.0, bPerpendicularLine = 0.0;
+	for(i = 0; i &lt; amountOfAlreadySet; i++){
+		for(j = 0; j &lt; amountOfLinesTraversed[i]; j++){
+				if(route[i][lineIndex[i]+1].x == route[i][lineIndex[i]].x){
+					aOriginalLine = 0;
+					bOriginalLine = route[i][lineIndex[i]].y - (a * route[i][lineIndex[i]].x);
+					aPerpendicularLine = 0;
+				}
+				else{
+					aOriginalLine = (route[i][lineIndex[i+1]].y - route[i][lineIndex[i]].y) / (route[i][lineIndex[i]+1].x - route[i][lineIndex[i]].x);
+					bOriginalLine = route[i][lineIndex[i]].y - (a * route[i][lineIndex[i]].x);
+					aPerpendicularLine = -1 * (1/aOriginalLine);
+				}
+
+				bPerpendicularLine = posy[i] - (aPerpendicularLine * posx[i]);
+
+
+		}		
+	}
+}
 void CheckForCrashes(){
     int i = 0, j = 0, k = 0, positive = 0;
     int highestSpeedID = 0, highestSpeed = 0;
@@ -310,6 +349,8 @@ void CheckForCrashes(){
     double j_bottom_right_caronly_x, j_bottom_right_caronly_y, j_top_left_caronly_x, j_top_left_caronly_y;
     bool CrashAlreadyDetected = false;
 
+
+	
     for(i = 0; i &lt; amountOfAlreadySet; i++){
 		if(route[i] == 12){
 			i_bottom_right_caronly_y = posy[i] - gapDistance - delta;
