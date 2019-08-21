@@ -10,8 +10,7 @@ import time
 import math
 import copy
 import re
-#import pandas as pd
-
+from shapely.geometry import LineString
 # we need to import python modules from the $SUMO_HOME/tools directory
 try:
      tools = os.path.join(os.environ['SUMO_HOME'], "tools")
@@ -330,6 +329,8 @@ def GenerateFlowForIntersection(pathToModel, cfg):
     junctions = nfile.getElementsByTagName('junction')
     LongestJunctions = 0
     currentCenterPoint = (0,0)
+    ListOfRouteIDs = []
+    ListOfNonIntersectingRoutes = []
 
     #Find center of junction
     for junction in junctions:
@@ -372,6 +373,15 @@ def GenerateFlowForIntersection(pathToModel, cfg):
 
     maxListLenght = FindMaxListLength(ListOfRoutes)
 
+    for i in range(0, len(ListOfRoutes)):
+        OuterLine = LineString(ListOfRoutes[i])
+        for k in range(0, len(ListOfRoutes)):
+            InnerLine = LineString(ListOfRoutes[k])
+
+            if(OuterLine.intersection(InnerLine).is_empty):
+                intersectingTuple = (i,k)
+                ListOfNonIntersectingRoutes.append(intersectingTuple)
+
     #Scale each element and fill each list to have the same amount of elements
     for i in range(0, len(ListOfRoutes)):
         for j in range(0,len(ListOfRoutes[i])):
@@ -383,15 +393,19 @@ def GenerateFlowForIntersection(pathToModel, cfg):
         while(len(ListOfRoutes[i]) < maxListLenght):
             ListOfRoutes[i].append((32767,32767))
 
-    return GiveUppaalInfo(ListOfRoutes, ListOfRouteNames, maxListLenght), CenterOfInterscetion
+    return GiveUppaalInfo(ListOfRoutes, ListOfRouteNames, maxListLenght, ListOfNonIntersectingRoutes), CenterOfInterscetion
 
-def GiveUppaalInfo(Routes, RouteNames, maxListLenght):
+def GiveUppaalInfo(Routes, RouteNames, maxListLenght, ListOfNonIntersectingRoutes):
     fo = open(icavModel, "r+")
     str_model = fo.read()
     fo.close()
 
     toReplace = "//HOLDER_AMOUNT_OF_ROUTES"
     value = str(len(RouteNames)) + ';'
+    str_model = str.replace(str_model, toReplace, value, 1)
+
+    toReplace = "//AMOUNT_HOLDER_NON_INTERSECTING_ROUTES"
+    value = str(len(ListOfNonIntersectingRoutes)) + ';'
     str_model = str.replace(str_model, toReplace, value, 1)
 
     toReplace = "//HOLDER_ROUTES"
@@ -403,8 +417,24 @@ def GiveUppaalInfo(Routes, RouteNames, maxListLenght):
         valueString = valueString.replace('(','{')
         valueString = valueString.replace(')','}')
         value += 'const point ' + RouteNames[i] + '[' + str(maxListLenght) + ']' + ' = ' + valueString
-        
     str_model = str.replace(str_model, toReplace, value, 1)
+
+    toReplace = "//HOLDER_NON_INTERSECTING_ROUTES"
+    value = "{"
+    i = 0
+    for element in ListOfNonIntersectingRoutes:
+        value += str(element) + ","
+        i = i + 1
+        if(i%20 == 0):
+            value += "\n"
+    value = value[:-1]
+    value = value.replace('[','{')
+    value = value.replace(']','}')
+    value = value.replace('(','{')
+    value = value.replace(')','}')
+    value += "};"
+    str_model = str.replace(str_model, toReplace, value, 1)
+
 
     modelName = os.path.join(pathToModels, 'tempModel' + str(options.expid) + '.xml')
     text_file = open(modelName, "w")

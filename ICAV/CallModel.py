@@ -171,6 +171,16 @@ def createModel(master_model,expId,simStep,cars,routes,routenames,center,maxList
     value += "};"
     str_model = str.replace(str_model, toReplace, value, 1)
 
+    toReplace = "//HOLDER_CAR_ROUTE_ID"
+    value = "{"
+    for i in range (0,len(cars)):
+        RouteToFind = 'From' + str(cars[i][6][0]) + 'To' + str(cars[i][6][1]) + 'On' + str(cars[i][12][-1:])
+        RouteIndex = routenames.index(RouteToFind)
+        value += str(RouteIndex) + ","
+    value = value[:-1]
+    value += "};"
+    str_model = str.replace(str_model, toReplace, value, 1)
+
     toReplace = "//HOLDER_CAR_DECEL"
     value = "{"
     for i in range (0,len(cars)):

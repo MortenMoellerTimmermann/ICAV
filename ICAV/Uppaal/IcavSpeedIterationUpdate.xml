@@ -122,10 +122,15 @@ typedef struct {
 
 //HOLDER_ROUTES
 
+
+
 const double CenterOfIntersectionX = //HOLDER_CENTER_INTERSECTION_X
 const double CenterOfIntersectionY = //HOLDER_CENTER_INTERSECTION_Y
 const int MaxListLenght = //MAX_LIST_LENGHT
 const int XParalelVector[2] = {0,1};
+const int AmountOfNonIntersectingRoutes = //AMOUNT_HOLDER_NON_INTERSECTING_ROUTES
+
+int NonIntersectingRoutes[AmountOfNonIntersectingRoutes][2] = //HOLDER_NON_INTERSECTING_ROUTES
 
 int length[N] = //HOLDER_CAR_LENGTH
 int width[N] = //HOLDER_CAR_WIDTH
@@ -137,7 +142,7 @@ int prevPosX[N];
 int prevPosY[N];
 double distance[N] ;
 point route[N][MaxListLenght] = //HOLDER_CAR_ROUTE
-point nextStepPoints[N][MaxListLenght];
+int routeIds[N] = //HOLDER_CAR_ROUTE_ID
 int amountOfLinesTraversed[N];
 int lineIndex[MaxListLenght];
 int decel[N] = //HOLDER_CAR_DECEL
@@ -204,10 +209,10 @@ void UpdatePos(){
 	double a = 0.0, b = 0.0, dotProduct = 0.0, determinant = 0.0, angleInRadians = 0.0, TimeToNextLine = 0.0, nextPosx = 0.0, nextPosy = 0.0;
     for(i = 0; i &lt; amountOfAlreadySet; i++){
 		int amountOfLines = 0;
+		double remainingTime = 1.0;
         if(done[i] == 0){
 			prevPosX[i] = posx[i];
 			prevPosY[i] = posy[i];
-			double remainingTime = 1.0;
 			for(j = 0; j &lt; MaxListLenght; j++){
                 while(remainingTime &gt; 0){
 					if(route[i][j].x &lt; 32767){
@@ -248,7 +253,7 @@ void UpdatePos(){
 								posy[i] = fint(nextPosy);	
 
 								amountOfLines = amountOfLines + 1;
-								lineIndex[i] = j;
+								lineIndex[i] = j - amountOfLines;
 								amountOfLinesTraversed[i] = amountOfLines;
                          	}
 						}
@@ -321,26 +326,31 @@ void CheckSpeedUpdate(){
 
 void CheckForCrashesNew(){
 	int i = 0, j = 0;
-	double aOriginalLine = 0.0, bOriginalLine = 0.0, aPerpendicularLine = 0.0, bPerpendicularLine = 0.0;
+	double delta = 3.0, carOneCenterPointX = 0.0, carOneCenterPointY = 0.0, carTwoCenterPointX = 0.0, 
+	carTwoCenterPointY = 0.0, radiusCarOne = 0.0, radiusCarTwo = 0.0, distanceRatio = 0.0, carOneEndPointX = 0.0, 
+	carOneEndPointY = 0.0, carTwoEndPointX = 0.0, carTwoEndPointY = 0.0;
+	bool CrashAlreadyDetected = false;
+
 	for(i = 0; i &lt; amountOfAlreadySet; i++){
-		for(j = 0; j &lt; amountOfLinesTraversed[i]; j++){
-				if(route[i][lineIndex[i]+1].x == route[i][lineIndex[i]].x){
-					aOriginalLine = 0;
-					bOriginalLine = route[i][lineIndex[i]].y - (a * route[i][lineIndex[i]].x);
-					aPerpendicularLine = 0;
-				}
-				else{
-					aOriginalLine = (route[i][lineIndex[i+1]].y - route[i][lineIndex[i]].y) / (route[i][lineIndex[i]+1].x - route[i][lineIndex[i]].x);
-					bOriginalLine = route[i][lineIndex[i]].y - (a * route[i][lineIndex[i]].x);
-					aPerpendicularLine = -1 * (1/aOriginalLine);
-				}
-
-				bPerpendicularLine = posy[i] - (aPerpendicularLine * posx[i]);
-
-
-		}		
-	}
+		distanceRatio = length[i] / sqrt((pow(route[i][lineIndex[i]].x - prevPosX,2)) + (pow(route[i][lineIndex[i]].y - prevPosY,2))); 
+		carOneEndPointX = ((1-distanceRatio)*prevPosX + (distanceRatio * route[i][lineIndex[i]].x));
+		carOneEndPointY = ((1-distanceRatio)*prevPosY + (distanceRatio * route[i][lineIndex[i]].y));
+		carOneCenterPointX = 
+		carOneCenterPointY =
+		radiusCarOne = 
+		
+		for(j = 0; j &lt; amountOfAlreadySet; j++){
+			//Skips the same car and duplicates
+            if(i &lt; j &amp;&amp; done[i] == 0 &amp;&amp; done[j] == 0){
+                CrashAlreadyDetected = false;	
+				if()
+				radiusCarTwo = fisk123
+			}
+		}
+	}		
 }
+
+/*
 void CheckForCrashes(){
     int i = 0, j = 0, k = 0, positive = 0;
     int highestSpeedID = 0, highestSpeed = 0;
@@ -425,6 +435,7 @@ void CheckForCrashes(){
         }
     }
 }
+*/
 
 void SyncCarSpeed(){
     newSpeed[global_uid] = global_newSpeed;
